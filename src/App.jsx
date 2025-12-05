@@ -1,11 +1,12 @@
-
+import { Menu } from "./Components/shared/Menu"
 
 function App() {
   return (
     <>
-      <div>
+      <Menu />
+      <main>
 
-      </div>
+      </main>
     </>
   )
 }
