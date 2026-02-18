@@ -4,17 +4,37 @@ import Navbar from "react-bootstrap/Navbar";
 
 export const Menu = () => {
   return (
-    <>
-      <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+    <Navbar 
+      expand="lg" 
+      variant="dark" 
+      style={{ 
+        backgroundColor: "#0a0a0a", // Negro profundo
+        borderBottom: "2px solid #007bff", // Línea azul sutil
+        padding: "1rem 0"
+      }}
+      sticky="top"
+    >
+      <Container>
+        {/* Tu nombre o logo a la izquierda */}
+        <Navbar.Brand href="#home" style={{ fontWeight: 'bold', color: '#007bff' }}>
+          MI PORTAFOLIO
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="navbarScroll" />
+
+        <Navbar.Collapse id="navbarScroll">
+          {/* mx-auto centra el contenido horizontalmente */}
+          <Nav className="mx-auto my-2 my-lg-0 font-weight-bold">
+            <Nav.Link href="#home" className="px-3">Inicio</Nav.Link>
+            <Nav.Link href="#proyectos" className="px-3">Proyectos</Nav.Link>
+            <Nav.Link href="#sobre-mi" className="px-3">Sobre Mí</Nav.Link>
+            <Nav.Link href="#contacto" className="px-3">Contacto</Nav.Link>
           </Nav>
-        </Container>
-      </Navbar>
-    </>
+
+          {/* Espaciador para que el logo no se vea desplazado si quieres simetría perfecta */}
+          <div className="d-none d-lg-block" style={{ width: '100px' }}></div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };

@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Menu />
-      <main>
+      <main className="Color-Fondo">
         <Inicio />
 
       </main>
