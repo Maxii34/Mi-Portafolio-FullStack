@@ -28,6 +28,7 @@ export const Menu = () => {
             <Nav.Link href="#educacion" className="px-3 fs-5">Educación</Nav.Link>
             <Nav.Link href="#proyectos" className="px-3 fs-5">Proyectos</Nav.Link>
             <Nav.Link href="#habilidades" className="px-3 fs-5">Habilidades</Nav.Link>
+            <Nav.Link href="#contacto" className="px-3 fs-5">Contactame</Nav.Link>
           </Nav>
 
           {/* Espaciador para que el logo no se vea desplazado si quieres simetría perfecta */}
