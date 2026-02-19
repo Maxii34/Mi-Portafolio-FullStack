@@ -309,9 +309,8 @@
 }
 
 .contact-input {
-  background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
   border-radius: 10px !important;
   padding: 12px !important;
 }

@@ -35,6 +35,8 @@ export const SectorEducacion = () => {
         { label: "Módulo 2", items: "Git & GitHub Avanzado" },
         { label: "Módulo 3", items: "Docker & Compose" },
         { label: "Módulo 4", items: "Arquitectura RESTful" },
+        { label: "Módulo 5", items: "Debugging" },
+        { label: "Módulo 6", items: "Logica de programacion" },
       ],
     },
   ];

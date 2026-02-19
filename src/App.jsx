@@ -16,7 +16,6 @@ function App() {
         <SectorProyectos />
         <SectorStack />
         <SectorContacto />
-
       </main>
       <Footer />
     </>
