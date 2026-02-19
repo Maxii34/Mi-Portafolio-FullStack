@@ -9,11 +9,20 @@ export const SectorEducacion = () => {
       periodo: "2025",
       descripcion: "Formación integral en el stack MERN.",
       competencias: [
-        { label: "FRONTEND", items: "HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap" },
-        { label: "BACKEND", items: "NodeJS, Express, Express Validator, Bcrypt, JWT" },
+        {
+          label: "FRONTEND",
+          items: "HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap",
+        },
+        {
+          label: "BACKEND",
+          items: "NodeJS, Express, Express Validator, Bcrypt, JWT",
+        },
         { label: "Bases de Datos", items: "MongoDB, Mongoose" },
-        { label: "Herramientas", items: "VS Code, Taiga, Git & GitHub, Slack, Postman" }
-      ]
+        {
+          label: "Herramientas",
+          items: "VS Code, Taiga, Git & GitHub, Slack, Postman",
+        },
+      ],
     },
     {
       id: 2,
@@ -25,14 +34,16 @@ export const SectorEducacion = () => {
         { label: "Módulo 1", items: "SQL & Prisma" },
         { label: "Módulo 2", items: "Git & GitHub Avanzado" },
         { label: "Módulo 3", items: "Docker & Compose" },
-        { label: "Módulo 4", items: "Arquitectura RESTful" }
-      ]
-    }
+        { label: "Módulo 4", items: "Arquitectura RESTful" },
+      ],
+    },
   ];
 
   return (
-    <Container className="py-5" id="educacion">
-      <h2 className="section-title">Estudios y <span className="text-highlight">Formación</span></h2>
+    <Container className="py-5 mt-lg-5" id="educacion">
+      <h2 className="section-title">
+        Estudios y <span className="text-highlight">Formación</span>
+      </h2>
 
       <Row className="g-4">
         {estudios.map((estudio) => (
@@ -40,16 +51,30 @@ export const SectorEducacion = () => {
             <Card className="education-card p-3">
               <Card.Body className="d-flex flex-column">
                 <div className="edu-year">{estudio.periodo}</div>
-                <Card.Title className="edu-institution">{estudio.institucion}</Card.Title>
-                <Card.Subtitle className="mb-3 text-white-50">{estudio.titulo}</Card.Subtitle>
-                
-                <Card.Text className="edu-description">{estudio.descripcion}</Card.Text>
+                <Card.Title className="edu-institution">
+                  {estudio.institucion}
+                </Card.Title>
+                <Card.Subtitle className="mb-3 text-white-50">
+                  {estudio.titulo}
+                </Card.Subtitle>
+
+                <Card.Text className="edu-description">
+                  {estudio.descripcion}
+                </Card.Text>
 
                 <div className="mt-auto pt-3 border-top border-secondary">
-                  <p className="small fw-bold text-uppercase mb-2 text-primary">Competencias Técnicas:</p>
+                  <p className="small fw-bold text-uppercase mb-2 text-primary">
+                    Competencias Técnicas:
+                  </p>
                   {estudio.competencias.map((comp, i) => (
-                    <div key={i} className="mb-1" style={{ fontSize: '0.85rem' }}>
-                      <span className="text-white-50 fw-bold">{comp.label}: </span>
+                    <div
+                      key={i}
+                      className="mb-1"
+                      style={{ fontSize: "0.85rem" }}
+                    >
+                      <span className="text-white-50 fw-bold">
+                        {comp.label}:{" "}
+                      </span>
                       <span className="text-light">{comp.items}</span>
                     </div>
                   ))}
@@ -60,19 +85,27 @@ export const SectorEducacion = () => {
         ))}
       </Row>
       <div className="mt-5 text-center">
-  <h4 className="mb-4 text-white-50" style={{ fontSize: '1.2rem' }}>Habilidades Interpersonales</h4>
-  <div className="d-flex flex-wrap justify-content-center gap-2">
-    {[
-      "Resiliente", "Autodidacta", "Aprendizaje Constante", 
-      "Trabajo en Equipo", "Empatía", "Flexibilidad", 
-      "Humildad", "Proactivo", "Curioso"
-    ].map((skill, index) => (
-      <span key={index} className="soft-skill-badge">
-        {skill}
-      </span>
-    ))}
-  </div>
-</div>
+        <h4 className="mb-4 text-white-50" style={{ fontSize: "1.2rem" }}>
+          Habilidades Interpersonales
+        </h4>
+        <div className="d-flex flex-wrap justify-content-center gap-2">
+          {[
+            "Resiliente",
+            "Autodidacta",
+            "Aprendizaje Constante",
+            "Trabajo en Equipo",
+            "Empatía",
+            "Flexibilidad",
+            "Humildad",
+            "Proactivo",
+            "Curioso",
+          ].map((skill, index) => (
+            <span key={index} className="soft-skill-badge">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
     </Container>
   );
 };

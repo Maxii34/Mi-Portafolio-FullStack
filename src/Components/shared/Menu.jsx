@@ -25,9 +25,9 @@ export const Menu = () => {
           {/* mx-auto centra el contenido horizontalmente */}
           <Nav className="mx-auto my-2 my-lg-0 font-weight-bold">
             <Nav.Link href="#sobre-mi" className="px-3 fs-5">Sobre Mí</Nav.Link>
-            <Nav.Link href="#home" className="px-3 fs-5">Educación</Nav.Link>
-            <Nav.Link href="#contacto" className="px-3 fs-5">Habilidades</Nav.Link>
+            <Nav.Link href="#educacion" className="px-3 fs-5">Educación</Nav.Link>
             <Nav.Link href="#proyectos" className="px-3 fs-5">Proyectos</Nav.Link>
+            <Nav.Link href="#habilidades" className="px-3 fs-5">Habilidades</Nav.Link>
           </Nav>
 
           {/* Espaciador para que el logo no se vea desplazado si quieres simetría perfecta */}
