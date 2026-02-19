@@ -1,17 +1,98 @@
 .Color-Fondo {
   /* Degradado: Azul muy oscuro a Negro */
   background: linear-gradient(180deg, #020b1a 0%, #050505 100%);
-  
+
   /* Asegura que ocupe al menos toda la pantalla */
   min-height: 100vh;
-  
+
   /* Color de texto por defecto para que sea legible */
   color: #f8f9fa;
-  
+
   /* Evita que el contenido se pegue a los bordes */
-  padding-top: 2rem; 
+  padding-top: 2rem;
   padding-bottom: 5rem;
-  
+
   /* Un toque de suavidad al scroll */
   scroll-behavior: smooth;
+}
+
+/*Imagen perfil*/
+
+.profile-image-container {
+  position: relative;
+  padding: 10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #007bff, transparent);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 4px solid #0a0a0a;
+  transition: transform 0.4s ease-in-out; 
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Botones personalizados */
+.btn-custom {
+  border-radius: 20px !important;
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px !important;
+}
+
+/* Botón primario (azul) */
+.btn-cv {
+  background-color: #007bff !important;
+  border: none !important;
+}
+
+/* Quitar subrayado del link */
+.download-link {
+  text-decoration: none;
+}
+
+/*introducion*/
+
+/* Título principal */
+.intro-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Color azul para tu nombre */
+.text-highlight {
+  color: #007bff;
+}
+
+/* Contenedor del texto descriptivo */
+.intro-text-container {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  max-width: 650px;
+}
+
+/* Párrafo pequeño del final (el "quote") */
+.intro-quote {
+  font-size: 0.9rem;
+  color: #888888;
+  margin-top: 1rem;
+}
+
+/* Botón de exploración */
+.btn-explore {
+  border-radius: 20px !important;
+  margin-top: 1.5rem;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }

@@ -1,19 +1,25 @@
+import { motion } from "framer-motion";
+
 export const Introduccion = () => {
   return (
     <div className="py-5">
-      <h1
-        style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "1.5rem" }}
+      {/* Título con animación desde la izquierda */}
+      <motion.h1
+        className="intro-title"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        Hola, soy <span style={{ color: "#007bff" }}>Maxi</span>
-      </h1>
+        Hola, soy <br /> 
+        <span className="text-highlight">Maximiliano Ordoñez</span>
+      </motion.h1>
 
-      <div
-        style={{
-          fontSize: "1.2rem",
-          lineHeight: "1.8",
-          color: "#e0e0e0", // Un gris muy claro para que no sea tan pesado como el blanco puro
-          maxWidth: "650px",
-        }}
+      {/* Bloque de texto con animación desde abajo */}
+      <motion.div
+        className="intro-text-container"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
       >
         <p>
           Soy un desarrollador web enfocado en la creación de interfaces
@@ -25,19 +31,26 @@ export const Introduccion = () => {
           ciclo completo de un proyecto: desde la fluidez visual que el usuario
           percibe, hasta la arquitectura robusta y eficiente que lo sostiene.
         </p>
-        <p>
+        
+        <p className="intro-quote">
           "Explora mi trabajo y descubre cómo transformo desafíos en soluciones
           a través de un desarrollo sólido y eficiente."
         </p>
-      </div>
+      </motion.div>
 
-      <a
-        href="#proyectos"
-        className="btn btn-outline-primary mt-4 px-4"
-        style={{ borderRadius: "20px" }}
+      {/* Botón con animación de escala */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
       >
-        Explorar mis proyectos
-      </a>
+        <a
+          href="#proyectos"
+          className="btn btn-outline-primary btn-explore"
+        >
+          Explorar mis proyectos
+        </a>
+      </motion.div>
     </div>
   );
 };
