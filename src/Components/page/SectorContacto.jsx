@@ -2,8 +2,18 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 export const SectorContacto = () => {
   return (
-    <Container className="py-5" id="contacto">
-      <h2 className="section-title mb-5">Trabajemos <span className="text-highlight">Juntos</span></h2>
+    <Container 
+      id="contacto" 
+      className="d-flex flex-column justify-content-center pt-5 mt-lg-5" 
+      style={{ 
+        minHeight: '100vh', 
+        scrollMarginTop: '20px' 
+      }}
+    >
+      <h2 className="section-title pb-4 text-center">
+        Trabajemos <span className="text-highlight">Juntos</span>
+      </h2>
+      
       <Row className="justify-content-center">
         <Col lg={8}>
           <div className="contact-container">

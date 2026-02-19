@@ -37,7 +37,7 @@ export const SectorStack = () => {
   ];
 
   return (
-    <Container className="stack-section" id="habilidades">
+    <Container className="stack-section " id="habilidades" style={{ minHeight: '115vh', scrollMarginTop: '20px'  }}>
       <h2 className="section-title mb-5">Mi Stack <span className="text-highlight">Tecnológico</span></h2>
       {categories.map((cat, idx) => (
         <div key={idx} className="mb-5">

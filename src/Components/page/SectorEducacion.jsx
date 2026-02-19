@@ -40,7 +40,7 @@ export const SectorEducacion = () => {
   ];
 
   return (
-    <Container className="pt-5  mt-lg-5" id="educacion" style={{ minHeight: '115vh' }}>
+    <Container className="pt-5  mt-lg-5" id="educacion" style={{ minHeight: '115vh', scrollMarginTop: '15px'  }}>
       <h2 className="section-title pt-5">
         Estudios y <span className="text-highlight">Formación</span>
       </h2>
