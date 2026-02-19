@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const Introduccion = () => {
   return (
-    <div className="py-5">
+    <div className="">
       {/* Título con animación desde la izquierda */}
       <motion.h1
         className="intro-title"

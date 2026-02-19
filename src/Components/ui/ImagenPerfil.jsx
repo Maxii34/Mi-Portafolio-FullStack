@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const ImagenPerfil = () => {
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center h-100 py-5">
+    <div className="d-flex flex-column justify-content-center align-items-center h-100">
       
       {/* Imagen con animación */}
       <motion.div

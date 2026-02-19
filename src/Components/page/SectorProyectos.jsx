@@ -48,7 +48,7 @@ export const SectorProyectos = () => {
 
   return (
     <Container className="py-5" id="proyectos">
-      <h2 className="section-title mb-5">
+      <h2 className="section-title mb-5 pt-5">
         Últimos <span className="text-highlight">Proyectos</span>
       </h2>
       <Row className="g-4">

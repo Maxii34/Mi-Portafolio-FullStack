@@ -40,15 +40,15 @@ export const SectorEducacion = () => {
   ];
 
   return (
-    <Container className="py-5 mt-lg-5" id="educacion">
-      <h2 className="section-title">
+    <Container className="pt-5  mt-lg-5" id="educacion" style={{ minHeight: '115vh' }}>
+      <h2 className="section-title pt-5">
         Estudios y <span className="text-highlight">Formación</span>
       </h2>
 
       <Row className="g-4">
         {estudios.map((estudio) => (
           <Col md={6} key={estudio.id} className="d-flex align-items-stretch">
-            <Card className="education-card p-3">
+            <Card className="education-card p-3 h-auto">
               <Card.Body className="d-flex flex-column">
                 <div className="edu-year">{estudio.periodo}</div>
                 <Card.Title className="edu-institution">
@@ -84,28 +84,6 @@ export const SectorEducacion = () => {
           </Col>
         ))}
       </Row>
-      <div className="mt-5 text-center">
-        <h4 className="mb-4 text-white-50" style={{ fontSize: "1.2rem" }}>
-          Habilidades Interpersonales
-        </h4>
-        <div className="d-flex flex-wrap justify-content-center gap-2">
-          {[
-            "Resiliente",
-            "Autodidacta",
-            "Aprendizaje Constante",
-            "Trabajo en Equipo",
-            "Empatía",
-            "Flexibilidad",
-            "Humildad",
-            "Proactivo",
-            "Curioso",
-          ].map((skill, index) => (
-            <span key={index} className="soft-skill-badge">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
     </Container>
   );
 };
