@@ -57,7 +57,7 @@ export const SectorContacto = () => {
       }}
     >
       <h2 className="section-title pb-1">
-        Trabajemos <span className="text-highlight">Juntos</span>
+        Contacto <span className="text-highlight">Directo</span>
       </h2>
 
       <Row className="justify-content-center">

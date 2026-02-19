@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { GiAchievement } from "react-icons/gi";
 
 export const SectorEducacion = () => {
   const estudios = [
@@ -6,8 +7,9 @@ export const SectorEducacion = () => {
       id: 1,
       institucion: "RollingCode School",
       titulo: "Desarrollador Full Stack MERN",
-      periodo: "2025",
-      descripcion: "Formación integral en el stack MERN.",
+      periodo: "[02/25 - 12/25] - Finalizado",
+      descripcion:
+        "Formación Full Stack MERN enfocada en el desarrollo de aplicaciones web completas. Creación de APIs REST con autenticación JWT, encriptación con Bcrypt y modelado de datos en MongoDB. Desarrollo frontend con React y trabajo colaborativo con Git bajo metodologías ágiles.",
       competencias: [
         {
           label: "FRONTEND",
@@ -29,7 +31,8 @@ export const SectorEducacion = () => {
       institucion: "RollingCode School - Ready to code",
       titulo: "Bootcamp de Especialización",
       periodo: "2026 (En Curso)",
-      descripcion: "Profundización en tecnologías de backend y arquitectura.",
+      descripcion:
+        "Bootcamp de especialización enfocado en backend avanzado y arquitectura. Profundización en bases de datos SQL con Prisma, control de versiones avanzado, contenedores con Docker, diseño RESTful, debugging y fortalecimiento de la lógica de programación.",
       competencias: [
         { label: "Módulo 1", items: "SQL & Prisma" },
         { label: "Módulo 2", items: "Git & GitHub Avanzado" },
@@ -42,7 +45,11 @@ export const SectorEducacion = () => {
   ];
 
   return (
-    <Container className="pt-5  mt-lg-5" id="educacion" style={{ minHeight: '115vh', scrollMarginTop: '15px'  }}>
+    <Container
+      className="pt-5  mt-lg-5"
+      id="educacion"
+      style={{ minHeight: "115vh", scrollMarginTop: "15px" }}
+    >
       <h2 className="section-title pt-5">
         Estudios y <span className="text-highlight">Formación</span>
       </h2>
@@ -52,7 +59,9 @@ export const SectorEducacion = () => {
           <Col md={6} key={estudio.id} className="d-flex align-items-stretch">
             <Card className="education-card p-3 h-auto">
               <Card.Body className="d-flex flex-column">
-                <div className="edu-year">{estudio.periodo}</div>
+                <div className="edu-year">
+                  <GiAchievement /> {estudio.periodo}
+                </div>
                 <Card.Title className="edu-institution">
                   {estudio.institucion}
                 </Card.Title>
@@ -64,23 +73,25 @@ export const SectorEducacion = () => {
                   {estudio.descripcion}
                 </Card.Text>
 
-                <div className="mt-auto pt-3 border-top border-secondary">
-                  <p className="small fw-bold text-uppercase mb-2 text-primary">
-                    Competencias Técnicas:
-                  </p>
-                  {estudio.competencias.map((comp, i) => (
-                    <div
-                      key={i}
-                      className="mb-1"
-                      style={{ fontSize: "0.85rem" }}
-                    >
-                      <span className="text-white-50 fw-bold">
-                        {comp.label}:{" "}
-                      </span>
-                      <span className="text-light">{comp.items}</span>
-                    </div>
-                  ))}
-                </div>
+                {/*
+<div className="mt-auto pt-1 border-top border-secondary mt-0">
+  <p className="small fw-bold text-uppercase mb-2 text-primary">
+    Competencias Técnicas:
+  </p>
+  {estudio.competencias.map((comp, i) => (
+    <div
+      key={i}
+      className="mb-1"
+      style={{ fontSize: "0.85rem" }}
+    >
+      <span className="text-white-50 fw-bold">
+        {comp.label}:{" "}
+      </span>
+      <span className="text-light">{comp.items}</span>
+    </div>
+  ))}
+</div>
+*/}
               </Card.Body>
             </Card>
           </Col>
