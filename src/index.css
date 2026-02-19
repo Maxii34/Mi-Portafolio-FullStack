@@ -96,3 +96,78 @@
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
 }
+
+/* Sector Educacion */
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: white;
+}
+
+.text-highlight {
+  color: #007bff;
+}
+
+/* LA CLAVE: Forzar el estiramiento de la card */
+.education-card {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(0, 123, 255, 0.2) !important;
+  border-radius: 15px !important;
+  color: white !important;
+  transition: all 0.3s ease;
+  
+  /* Esto asegura que la card ocupe todo el alto disponible del Col */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.education-card .card-body {
+  flex: 1; /* Esto obliga al cuerpo de la card a crecer y ocupar el espacio sobrante */
+  display: flex;
+  flex-direction: column;
+}
+
+.education-card:hover {
+  border-color: #007bff !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.edu-year {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-institution {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.edu-skills {
+  font-size: 0.9rem;
+  color: #adb5bd;
+  margin-top: 0.5rem; /* Separación mínima */
+}
+
+.soft-skill-badge {
+  background-color: rgba(0, 123, 255, 0.1);
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.soft-skill-badge:hover {
+  background-color: #007bff;
+  color: white;
+}

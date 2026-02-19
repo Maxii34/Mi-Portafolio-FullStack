@@ -1,5 +1,6 @@
 import { Menu } from "./Components/shared/Menu"
 import { Inicio } from "./Components/page/Inicio"
+import { SectorEducacion } from "./Components/page/SectorEducacion"
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Menu />
       <main className="Color-Fondo">
         <Inicio />
+        <SectorEducacion />
 
       </main>
     </>
