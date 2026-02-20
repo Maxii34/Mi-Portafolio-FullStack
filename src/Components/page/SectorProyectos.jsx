@@ -25,7 +25,8 @@ export const SectorProyectos = () => {
       descripcion:
         "Backend enfocado en la lógica de negocio, automatización de pagos, renovaciones y control de accesos mediante tokens.",
       imagenes: ["force1.jpg", "force2.jpg"],
-      stack: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT", "Bcrypt"],
+      stack: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
+      stackD: "Node.js Express MongoDB Mongoose JWT Bcrypt",
       links: {
         githubBack: "https://github.com/Maxii34",
       },
@@ -36,12 +37,13 @@ export const SectorProyectos = () => {
       subtitulo: "Plataforma de Gestión Hotelera",
       descripcion:
         "Sistema completo desarrollado en equipo para administrar reservas, habitaciones, clientes y servicios de forma eficiente.",
-      imagenes: ["hotel1.jpg", "hotel2.jpg", "hotel3.jpg"],
-      stack: ["React.js", "Node.js", "Express", "MongoDB", "JWT", "Bcrypt"],
+      imagenes: ["/Sintax01.png", "/Sintax02.png", "/Sintax03.png"],
+      stackB: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
+      stackF: "Reack Bootstrap JavaScript HTML5 CSS3 React Router",
       links: {
-        demo: "https://tu-demo.com",
-        githubFront: "https://github.com/Maxii34",
-        githubBack: "https://github.com/Maxii34",
+        demo: "https://sintaxhotelv2max.netlify.app",
+        githubFront: "https://github.com/Maxii34/ModuloN3-Front",
+        githubBack: "https://github.com/Maxii34/ModuloN3-Back",
       },
     },
   ];

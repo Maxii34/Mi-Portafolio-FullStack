@@ -11,6 +11,18 @@ import Swal from "sweetalert2";
 export const Footer = () => {
   const anioActual = new Date().getFullYear();
 
+const abrirInstagram = () => {
+  window.open("https://www.instagram.com/codemax.dev", "_blank");
+};
+
+const abrirLinkedin = () => {
+  window.open("https://www.linkedin.com/in/maxiiordo%C3%B1ez/", "_blank");
+};
+
+const abrirGitHub = () => {
+  window.open("https://github.com/Maxii34", "_blank");
+};
+
   const copiarCorreo = () => {
     navigator.clipboard.writeText("tu-email@gmail.com");
 
@@ -40,30 +52,27 @@ export const Footer = () => {
             <div className="footer-divider"></div>
 
             <div className="d-flex justify-content-center">
-              <a
-                href="https://github.com/Maxii34"
-                target="_blank"
+              <span
+                onClick={abrirGitHub}
                 rel="noreferrer"
                 className="footer-link-social"
               >
                 <TbBrandGithub />
-              </a>
-              <a
-                href="https://linkedin.com/in/tu-usuario"
-                target="_blank"
+              </span>
+              <span
+                onClick={abrirLinkedin}
                 rel="noreferrer"
                 className="footer-link-social"
               >
                 <TbBrandLinkedin />
-              </a>
-              <a
-                href="https://instagram.com/tu-usuario"
-                target="_blank"
+              </span>
+              <span
+                onClick={abrirInstagram}
                 rel="noreferrer"
                 className="footer-link-social"
               >
                 <TbBrandInstagram />
-              </a>
+              </span>
               <span
                 onClick={copiarCorreo}
                 className="footer-link-social"

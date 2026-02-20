@@ -4,6 +4,7 @@ import { TbBrandGithub, TbExternalLink } from "react-icons/tb";
 
 
 export const CardsProyectosFront = ({ p }) => {
+  console.log(p)
     return (
         <>
         <Card className="project-card w-100">
@@ -34,13 +35,9 @@ export const CardsProyectosFront = ({ p }) => {
                   {p.descripcion}
                 </Card.Text>
 
-                <div className="project-stack mb-4">
-                  {p.stack.map((tech, i) => (
-                    <span key={i} className="stack-tag">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                <Card.Text className="text-white-50 small" style={{ flex: 1 }}>
+                  Stack utilizado: <br /> {p.stackB} <br /> {p.stackF}
+                </Card.Text>
 
                 <div className="d-flex flex-wrap gap-2 mt-auto">
                   {p.links.demo && (
