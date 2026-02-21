@@ -263,22 +263,22 @@
 
 .stack-category-title {
   color: #007bff;
-  font-size: 1.1rem;
+  font-size: 17.6px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .tech-box {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(0, 123, 255, 0.1);
   border-radius: 12px;
-  padding: 15px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
   transition: all 0.3s ease;
   color: #adb5bd;
 }
@@ -291,11 +291,11 @@
 }
 
 .tech-icon {
-  font-size: 2.5rem;
+  font-size: 30px;
 }
 
 .tech-name {
-  font-size: 0.85rem;
+  font-size: 13.6px;
   font-weight: 500;
 }
 

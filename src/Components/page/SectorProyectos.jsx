@@ -45,7 +45,7 @@ export const SectorProyectos = () => {
         </h2>
       </div>
 
-      <Carousel className="pb-5" indicators={true}>
+      <Carousel className="pb-5" indicators={true} interval={null}>
         {proyectosAgrupados.map((grupo, index) => (
           <Carousel.Item key={index} style={{ overflow: "visible" }}>
             <Row
