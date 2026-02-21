@@ -46,7 +46,13 @@ export const SectorProyectos = () => {
         </motion.h2>
       </div>
 
-      <Carousel className="pb-5" indicators={true} interval={null}>
+      <Carousel 
+        className="pb-5" 
+        indicators={true} 
+        interval={null}
+        prevIcon={<span className="carousel-control-prev-icon" style={{ marginTop: "-200px" }} />}
+        nextIcon={<span className="carousel-control-next-icon" style={{ marginTop: "-200px" }} />}
+      >
         {proyectosAgrupados.map((grupo, index) => (
           <Carousel.Item key={index} style={{ overflow: "visible" }}>
             <Row

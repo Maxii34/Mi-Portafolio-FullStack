@@ -44,7 +44,7 @@ export const proyectos = [
   {
     id: 4,
     titulo: "Blog de Recetas",
-    subtitulo: "Plataforma de Exploración y Gestión de Recetas",
+    subtitulo: "Plataforma de Gestión de Recetas",
     descripcion:
       "Plataforma web interactiva para buscar y visualizar recetas de cocina, que incluye un panel de administración con autenticación para gestionar el contenido de forma segura.",
     imagenes: [
@@ -64,7 +64,7 @@ export const proyectos = [
   {
     id: 5,
     titulo: "Gestor de Tareas",
-    subtitulo: "Aplicación Web para la Gestión y Seguimiento de Tareas",
+    subtitulo: "Aplicación Web para la Gestión Tareas",
     descripcion:
       "Aplicación full-stack que permite a los usuarios crear, administrar y realizar un seguimiento del estado de sus tareas mediante una interfaz intuitiva y operaciones CRUD completas.",
     imagenes: [
@@ -83,9 +83,9 @@ export const proyectos = [
   {
     id: 6,
     titulo: "Apolo PetShop",
-    subtitulo: "Sistema de Gestión de Inventario para Tienda de Mascotas",
+    subtitulo: "Sistema de Tienda de Mascotas",
     descripcion:
-      "Aplicación web integral para la administración de productos de una tienda de mascotas, ofreciendo un CRUD completo para gestionar el catálogo mediante una interfaz fluida y responsiva.",
+      "Aplicación para la administración de productos de una tienda de mascotas, ofreciendo un CRUD completo para gestionar el catálogo mediante una interfaz fluida y responsiva.",
     imagenes: ["/img/Apolo01.png", "/img/Apolo02.png", "/img/Apolo03.png"],
     stackB: "Nodejs Express MongoDB",
     stackF:
