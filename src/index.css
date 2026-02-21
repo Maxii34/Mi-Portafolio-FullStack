@@ -1,0 +1,341 @@
+.Color-Fondo {
+  /* Degradado: Azul muy oscuro a Negro */
+  background: linear-gradient(180deg, #020b1a 0%, #050505 100%);
+
+  /* Asegura que ocupe al menos toda la pantalla */
+  min-height: 100vh;
+
+  /* Color de texto por defecto para que sea legible */
+  color: #f8f9fa;
+
+  /* Evita que el contenido se pegue a los bordes */
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+
+  /* Un toque de suavidad al scroll */
+  scroll-behavior: smooth;
+}
+
+/*Imagen perfil*/
+
+.profile-image-container {
+  position: relative;
+  padding: 10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #007bff, transparent);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 4px solid #0a0a0a;
+  transition: transform 0.4s ease-in-out; 
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Botones personalizados */
+.btn-custom {
+  border-radius: 20px !important;
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px !important;
+}
+
+/* Botón primario (azul) */
+.btn-cv {
+  background-color: #007bff !important;
+  border: none !important;
+}
+
+/* Quitar subrayado del link */
+.download-link {
+  text-decoration: none;
+}
+
+/*introducion*/
+
+/* Título principal */
+.intro-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Color azul para tu nombre */
+.text-highlight {
+  color: #007bff;
+}
+
+/* Contenedor del texto descriptivo */
+.intro-text-container {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  max-width: 650px;
+}
+
+/* Párrafo pequeño del final (el "quote") */
+.intro-quote {
+  font-size: 0.9rem;
+  color: #888888;
+  margin-top: 1rem;
+}
+
+/* Botón de exploración */
+.btn-explore {
+  border-radius: 20px !important;
+  margin-top: 1.5rem;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Sector Educacion */
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: white;
+}
+
+.text-highlight {
+  color: #007bff;
+}
+
+/* LA CLAVE: Forzar el estiramiento de la card */
+.education-card {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(0, 123, 255, 0.2) !important;
+  border-radius: 15px !important;
+  color: white !important;
+  transition: all 0.3s ease;
+  
+  /* Esto asegura que la card ocupe todo el alto disponible del Col */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.education-card .card-body {
+  flex: 1; /* Esto obliga al cuerpo de la card a crecer y ocupar el espacio sobrante */
+  display: flex;
+  flex-direction: column;
+}
+
+.education-card:hover {
+  border-color: #007bff !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.edu-year {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-institution {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.edu-skills {
+  font-size: 0.9rem;
+  color: #adb5bd;
+  margin-top: 0.5rem; /* Separación mínima */
+}
+
+.soft-skill-badge {
+  background-color: rgba(0, 123, 255, 0.1);
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.soft-skill-badge:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Sector de proyectos*/
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(0, 123, 255, 0.1) !important;
+  border-radius: 20px !important;
+  color: white !important;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  border-color: #007bff !important;
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 5px 3px rgba(32, 110, 228, 0.3);
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.project-img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+.stack-tag {
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.btn-project {
+  font-size: 0.85rem;
+  border-radius: 10px !important;
+  padding: 6px 15px !important;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/*Footer*/
+
+.footer-custom {
+  background-color: #0a0a0a;
+  border-top: 1px solid rgba(0, 123, 255, 0.2);
+  padding: 3rem 0 1.5rem 0;
+  box-shadow: 0 -10px 30px rgba(0, 123, 255, 0.05);
+}
+
+.footer-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.footer-link-social {
+  color: #adb5bd;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+.footer-link-social:hover {
+  color: #007bff;
+  transform: translateY(-5px);
+}
+
+.footer-text {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.footer-divider {
+  width: 50px;
+  height: 2px;
+  background-color: #007bff;
+  margin: 1.5rem auto;
+}
+
+/* Sector stack*/
+
+.stack-section {
+  padding: 80px 0;
+}
+
+.stack-category-title {
+  color: #007bff;
+  font-size: 17.6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.tech-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  border-radius: 12px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s ease;
+  color: #adb5bd;
+}
+
+.tech-box:hover {
+  background: rgba(0, 123, 255, 0.05);
+  border-color: #007bff;
+  transform: translateY(-5px);
+  color: #fff;
+}
+
+.tech-icon {
+  font-size: 30px;
+}
+
+.tech-name {
+  font-size: 13.6px;
+  font-weight: 500;
+}
+
+/*Sector contacto*/
+
+.contact-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.contact-input {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgb(0, 0, 0) !important;
+  border-radius: 10px !important;
+  padding: 12px !important;
+}
+
+.contact-input:focus {
+  border-color: #007bff !important;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2) !important;
+}
+
+.btn-send {
+  background-color: #007bff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 12px 30px !important;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-send:hover {
+  transform: scale(1.02);
+  background-color: #0056b3 !important;
+}
