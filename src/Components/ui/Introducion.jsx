@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 export const Introduccion = () => {
   return (
     <div className="">
-      {/* Título con animación desde la izquierda */}
       <motion.h1
         className="intro-title"
         initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: false, amount: 0.3 }}
       >
         Hola, soy <br /> 
         <span className="text-highlight">Maximiliano Ordoñez</span>
       </motion.h1>
 
-      {/* Bloque de texto con animación desde abajo */}
       <motion.div
         className="intro-text-container"
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
       >
         <p>
           Soy un desarrollador web enfocado en la creación de interfaces
@@ -31,23 +31,19 @@ export const Introduccion = () => {
           ciclo completo de un proyecto: desde la fluidez visual que el usuario
           percibe, hasta la arquitectura robusta y eficiente que lo sostiene.
         </p>
-        
         <p className="intro-quote">
           "Explora mi trabajo y descubre cómo transformo desafíos en soluciones
           a través de un desarrollo sólido y eficiente."
         </p>
       </motion.div>
 
-      {/* Botón con animación de escala */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.8 }}
+        viewport={{ once: false, amount: 0.3 }}
       >
-        <a
-          href="#proyectos"
-          className="btn btn-outline-primary btn-explore"
-        >
+        <a href="#proyectos" className="btn btn-outline-primary btn-explore">
           Explorar mis proyectos
         </a>
       </motion.div>

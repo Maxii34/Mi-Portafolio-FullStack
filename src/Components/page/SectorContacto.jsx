@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 
 export const SectorContacto = () => {
   const {
@@ -64,101 +65,114 @@ export const SectorContacto = () => {
         scrollMarginTop: "20px",
       }}
     >
-      <h2 className="section-title pb-1">
+      <motion.h2
+        className="section-title pb-1"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
         Contacto <span className="text-highlight">Directo</span>
-      </h2>
+      </motion.h2>
 
       <Row className="justify-content-center">
         <Col lg={8}>
-          <div className="contact-container rounded shadow-sm">
-            <Form onSubmit={handleSubmit(onSubmit)}>
-              <Row>
-                {/* Nombre Completo */}
-                <Col md={6} className="mb-3">
-                  <Form.Group>
-                    <Form.Label className="text-white-50 small">
-                      Nombre Completo
-                    </Form.Label>
-                    <Form.Control
-                      type="text"
-                      className={`contact-input ${errors.nombreCompleto ? "is-invalid" : ""}`}
-                      placeholder="Tu nombre"
-                      {...register("nombreCompleto", {
-                        required: "El nombre es obligatorio",
-                        minLength: { value: 3, message: "Mínimo 3 caracteres" },
-                      })}
-                    />
-                    {errors.nombreCompleto && (
-                      <Form.Text className="text-danger">
-                        {errors.nombreCompleto.message}
-                      </Form.Text>
-                    )}
-                  </Form.Group>
-                </Col>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            <div className="contact-container rounded shadow-sm">
+              <Form onSubmit={handleSubmit(onSubmit)}>
+                <Row>
+                  {/* Nombre Completo */}
+                  <Col md={6} className="mb-3">
+                    <Form.Group>
+                      <Form.Label className="text-white-50 small">
+                        Nombre Completo
+                      </Form.Label>
+                      <Form.Control
+                        type="text"
+                        className={`contact-input ${errors.nombreCompleto ? "is-invalid" : ""}`}
+                        placeholder="Tu nombre"
+                        {...register("nombreCompleto", {
+                          required: "El nombre es obligatorio",
+                          minLength: { value: 3, message: "Mínimo 3 caracteres" },
+                        })}
+                      />
+                      {errors.nombreCompleto && (
+                        <Form.Text className="text-danger">
+                          {errors.nombreCompleto.message}
+                        </Form.Text>
+                      )}
+                    </Form.Group>
+                  </Col>
 
-                {/* Email */}
-                <Col md={6} className="mb-3">
-                  <Form.Group>
-                    <Form.Label className="text-white-50 small">
-                      Correo Electrónico
-                    </Form.Label>
-                    <Form.Control
-                      type="email"
-                      className={`contact-input ${errors.email ? "is-invalid" : ""}`}
-                      placeholder="tucorreo@ejemplo.com"
-                      {...register("email", {
-                        required: "El email es requerido",
-                        pattern: {
-                          value:
-                            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                          message: "Email no válido",
-                        },
-                      })}
-                    />
-                    {errors.email && (
-                      <Form.Text className="text-danger">
-                        {errors.email.message}
-                      </Form.Text>
-                    )}
-                  </Form.Group>
-                </Col>
-              </Row>
+                  {/* Email */}
+                  <Col md={6} className="mb-3">
+                    <Form.Group>
+                      <Form.Label className="text-white-50 small">
+                        Correo Electrónico
+                      </Form.Label>
+                      <Form.Control
+                        type="email"
+                        className={`contact-input ${errors.email ? "is-invalid" : ""}`}
+                        placeholder="tucorreo@ejemplo.com"
+                        {...register("email", {
+                          required: "El email es requerido",
+                          pattern: {
+                            value:
+                              /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                            message: "Email no válido",
+                          },
+                        })}
+                      />
+                      {errors.email && (
+                        <Form.Text className="text-danger">
+                          {errors.email.message}
+                        </Form.Text>
+                      )}
+                    </Form.Group>
+                  </Col>
+                </Row>
 
-              {/* Mensaje */}
-              <Form.Group className="mb-4">
-                <Form.Label className="text-white-50 small">Mensaje</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={4}
-                  className={`contact-input ${errors.mensaje ? "is-invalid" : ""}`}
-                  placeholder="¿En qué puedo ayudarte?"
-                  {...register("mensaje", {
-                    required: "El mensaje no puede estar vacío",
-                    minLength: {
-                      value: 10,
-                      message: "Cuéntame un poco más (mínimo 10 carac.)",
-                    },
-                  })}
-                />
-                {errors.mensaje && (
-                  <Form.Text className="text-danger">
-                    {errors.mensaje.message}
-                  </Form.Text>
-                )}
-              </Form.Group>
+                {/* Mensaje */}
+                <Form.Group className="mb-4">
+                  <Form.Label className="text-white-50 small">Mensaje</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={4}
+                    className={`contact-input ${errors.mensaje ? "is-invalid" : ""}`}
+                    placeholder="¿En qué puedo ayudarte?"
+                    {...register("mensaje", {
+                      required: "El mensaje no puede estar vacío",
+                      minLength: {
+                        value: 10,
+                        message: "Cuéntame un poco más (mínimo 10 carac.)",
+                      },
+                    })}
+                  />
+                  {errors.mensaje && (
+                    <Form.Text className="text-danger">
+                      {errors.mensaje.message}
+                    </Form.Text>
+                  )}
+                </Form.Group>
 
-              <div className="text-center">
-                <Button
-                  variant="primary"
-                  type="submit"
-                  className="w-100 fw-bold py-2 btn-send"
-                  disabled={enviando}
-                >
-                  {enviando ? "Enviando..." : "Enviar Mensaje"}
-                </Button>
-              </div>
-            </Form>
-          </div>
+                <div className="text-center">
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    className="w-100 fw-bold py-2 btn-send"
+                    disabled={enviando}
+                  >
+                    {enviando ? "Enviando..." : "Enviar Mensaje"}
+                  </Button>
+                </div>
+              </Form>
+            </div>
+          </motion.div>
         </Col>
       </Row>
     </Container>

@@ -15,6 +15,7 @@ import {
   SiDocker,
   SiGithub
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 export const SectorStack = () => {
   const categories = [
@@ -55,21 +56,45 @@ export const SectorStack = () => {
       id="habilidades"
       style={{ minHeight: "115vh", scrollMarginTop: "20px" }}
     >
-      <h2 className="section-title mb-5">
+      <motion.h2
+        className="section-title mb-5"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
         Mi Stack <span className="text-highlight">Tecnológico</span>
-      </h2>
+      </motion.h2>
+
       {categories.map((cat, idx) => (
         <div key={idx} className="mb-5">
-          <h4 className="stack-category-title">{cat.title}</h4>
+          <motion.h4
+            className="stack-category-title"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            {cat.title}
+          </motion.h4>
+
           <Row className="g-3">
             {cat.skills.map((skill, i) => (
               <Col xs={4} md={2} key={i}>
-                <div className="tech-box">
-                  <span className="tech-icon" style={{ color: skill.color }}>
-                    {skill.icon}
-                  </span>
-                  <span className="tech-name">{skill.name}</span>
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  viewport={{ once: false, amount: 0.3 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <div className="tech-box">
+                    <span className="tech-icon" style={{ color: skill.color }}>
+                      {skill.icon}
+                    </span>
+                    <span className="tech-name">{skill.name}</span>
+                  </div>
+                </motion.div>
               </Col>
             ))}
           </Row>
