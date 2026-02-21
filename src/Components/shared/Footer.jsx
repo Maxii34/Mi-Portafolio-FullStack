@@ -24,7 +24,7 @@ const abrirGitHub = () => {
 };
 
   const copiarCorreo = () => {
-    navigator.clipboard.writeText("tu-email@gmail.com");
+    navigator.clipboard.writeText("exemaxi32@gmail.com");
 
     Swal.fire({
       title: "¡Copiado!",
@@ -48,7 +48,7 @@ const abrirGitHub = () => {
             <p className="text-white-50 mt-2">
               Transformando desafíos en soluciones digitales robustas.
             </p>
-            <span className="text-white-50 mt-2">Ultima Actualizacion: 21/02/2026</span>
+            <span className="text-white-50 mt-2">Ultima Actualizacion: 21/022026</span>
 
             <div className="footer-divider"></div>
 

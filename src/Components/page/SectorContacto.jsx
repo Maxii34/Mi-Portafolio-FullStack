@@ -30,9 +30,17 @@ export const SectorContacto = () => {
 
       Swal.fire({
         title: "¡Mensaje enviado!",
-        text: "Gracias por contactarme. Te responderé lo antes posible.",
+        text: "Te responderé lo antes posible.",
         icon: "success",
-        confirmButtonColor: "#0d6efd",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
       });
       reset();
     } catch (error) {

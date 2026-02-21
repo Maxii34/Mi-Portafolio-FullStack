@@ -19,7 +19,7 @@ export const proyectos = [
     subtitulo: "Sistema de gestión para gimnasios",
     descripcion:
       "Backend enfocado en la lógica de negocio, automatización de pagos, renovaciones y control de accesos mediante tokens.",
-    imagenes: ["force1.jpg", "force2.jpg"],
+    imagenes: ["/img/SinImagen.png", "force2.jpg"],
     stack: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
     stackD: "Node.js Express MongoDB Mongoose JWT Bcrypt",
     links: {
