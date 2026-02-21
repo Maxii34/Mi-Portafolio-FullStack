@@ -1,4 +1,4 @@
-import { Container, Card, Button, Carousel } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { TbBrandGithub, TbExternalLink } from "react-icons/tb";
 
 export const CardsProyectosFront = ({ p }) => {
