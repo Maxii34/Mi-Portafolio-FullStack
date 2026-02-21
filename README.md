@@ -1,16 +1,49 @@
-# React + Vite
+# 🧑‍💻 Mi Portafolio FullStack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido a mi portafolio personal FullStack, desarrollado con React + Vite para mostrar mis proyectos, habilidades y experiencia como desarrollador web.
 
-Currently, two official plugins are available:
+Este sitio funciona como una presentación clara y profesional de mi trabajo, con navegación organizada y secciones para conocer mis proyectos, tecnologías y cómo contactarme.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Sobre mí
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Hola 👋 Soy Maximiliano Ordoñez, desarrollador FullStack enfocado en la creación de aplicaciones web modernas, rápidas y optimizadas.
 
-## Expanding the ESLint configuration
+Trabajo principalmente con tecnologías como React, JavaScript, HTML, CSS y bases de datos NoSQL como MongoDB. Me apasiona construir soluciones reales que aporten valor y mejoren la experiencia del usuario.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 💡 ¿Qué encontrarás en este repositorio?
+
+Este repositorio contiene el código fuente completo de mi portafolio web, donde podrás ver:
+
+- ✅ Presentación profesional
+- ✅ Proyectos destacados
+- ✅ Stack tecnológico
+- ✅ Información de contacto
+- ✅ Diseño responsivo adaptable a dispositivos móviles
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- ⚛️ React
+- 🚀 Vite
+- 🟨 JavaScript
+- 🎨 HTML5
+- 🎨 CSS3
+- 🔧 Git & GitHub
+
+---
+
+
+## 📌 Objetivo del proyecto
+
+Este portafolio tiene como objetivo mostrar mis habilidades como desarrollador FullStack y servir como carta de presentación para oportunidades laborales y proyectos freelance.
+
+---
+
+## ⭐ Licencia
+
+Este proyecto es de uso personal y profesional.

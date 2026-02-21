@@ -48,7 +48,7 @@ const abrirGitHub = () => {
             <p className="text-white-50 mt-2">
               Transformando desafíos en soluciones digitales robustas.
             </p>
-            <span className="text-white-50 mt-2">Ultima Actualizacion: 21/022026</span>
+            <span className="text-white-50 mt-2">Ultima Actualizacion: 21/02/2026</span>
 
             <div className="footer-divider"></div>
 
