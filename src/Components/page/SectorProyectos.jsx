@@ -56,7 +56,7 @@ export const SectorProyectos = () => {
         {proyectosAgrupados.map((grupo, index) => (
           <Carousel.Item key={index} style={{ overflow: "visible" }}>
             <Row
-              className="g-4 justify-content-center px-5"
+              className="g-4 justify-content-center px-4"
               style={{ overflow: "visible", paddingTop: "20px" }}
             >
               {grupo.map((p, i) => (

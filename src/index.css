@@ -185,7 +185,7 @@
 .project-card {
   background-color: rgba(255, 255, 255, 0.03) !important;
   border: 1px solid rgba(0, 123, 255, 0.1) !important;
-  border-radius: 20px !important;
+  border-radius: 10px !important;
   color: white !important;
   transition: all 0.4s ease;
   overflow: hidden;
@@ -222,11 +222,46 @@
 
 .btn-project {
   font-size: 0.85rem;
-  border-radius: 10px !important;
-  padding: 6px 15px !important;
+  border-radius: 5px; 
+  padding: 6px 10px; 
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.btn-p-front {
+  background: #1b1b1b !important;
+  border: 1px solid #2a2a2a !important;
+  color: #fff !important;
+  transition: all .25s ease;
+}
+
+.btn-p-front:hover {
+  background: #242424 !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+  transform: translateY(-2px);
+}
+.btn-p-front {
+  background-color: #000 !important;
+  border: none !important;
+  color: #fff !important;
+
+}
+.btn-p-front:hover {
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.btn-p-demo {
+  background: #0d6efd !important;
+  border: none !important;
+  color: #fff !important;
+  transition: all .25s ease;
+}
+
+.btn-p-demo:hover {
+  background: #0b5ed7 !important;
+  box-shadow: 0 8px 18px rgba(13,110,253,0.35);
+  transform: translateY(-2px);
 }
 
 /*Footer*/

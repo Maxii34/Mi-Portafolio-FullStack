@@ -16,6 +16,18 @@ export const Menu = () => {
     redirecion("/contacto");
   };
 
+const abrirInstagram = () => {
+  window.open("https://www.instagram.com/codemax.dev", "_blank");
+};
+
+const abrirLinkedin = () => {
+  window.open("https://www.linkedin.com/in/maxiiordo%C3%B1ez/", "_blank");
+};
+
+const abrirGitHub = () => {
+  window.open("https://github.com/Maxii34", "_blank");
+};
+
   return (
     <Navbar
       expand="lg"
@@ -72,18 +84,18 @@ export const Menu = () => {
 
           {/* Redes sociales */}
           <div className="d-flex align-items-center gap-3 text-white fs-5">
-            <button className="button instagram">
+            <button onClick={abrirInstagram} className="button instagram">
               <svg viewBox="0 0 24 24" fill="none" height="24" width="24">
                 <path
                   clip-rule="evenodd"
                   d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
                   fill="currentColor"
                   fill-rule="evenodd"
-                />
+                />|
               </svg>
             </button>
 
-            <button className="button linkedin">
+            <button onClick={abrirLinkedin} className="button linkedin">
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -94,7 +106,7 @@ export const Menu = () => {
               </svg>
             </button>
 
-            <button className="button github">
+            <button onClick={abrirGitHub} className="button github">
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"

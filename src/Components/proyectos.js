@@ -64,13 +64,13 @@ export const proyectos = [
   {
     id: 5,
     titulo: "Gestor de Tareas",
-    subtitulo: "Aplicación Web para la Gestión Tareas",
+    subtitulo: "Aplicación Web para Gestión Tareas",
     descripcion:
       "Aplicación full-stack que permite a los usuarios crear, administrar y realizar un seguimiento del estado de sus tareas mediante una interfaz intuitiva y operaciones CRUD completas.",
     imagenes: [
-      "/img/SinImagen.png",
-      "/img/GestorTareas02.png",
-      "/img/GestorTareas03.png",
+      "/img/GTarea01.png",
+      "/img/GTarea02.png",
+      "/img/GTarea03.png",
     ],
     stackB: "Nodejs Express MongoDB Mongoose Cors Morgan",
     stackF: "React Vite Bootstrap React-Bootstrap React-Router SweetAlert2",

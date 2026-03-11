@@ -22,38 +22,42 @@ export const CardsProyectosFront = ({ p }) => {
             {p.descripcion}
           </Card.Text>
 
-          <div className="d-flex flex-wrap gap-2 mt-auto">
-            {p.links.demo && (
-              <Button
-                href={p.links.demo}
-                target="_blank"
-                variant="primary"
-                className="btn-project"
-              >
-                <TbExternalLink /> Demo
-              </Button>
-            )}
-            {p.links.githubFront && (
-              <Button
-                href={p.links.githubFront}
-                target="_blank"
-                variant="outline-light"
-                className="btn-project"
-              >
-                <TbBrandGithub /> Front
-              </Button>
-            )}
-            {p.links.githubBack && (
-              <Button
-                href={p.links.githubBack}
-                target="_blank"
-                variant="outline-light"
-                className="btn-project"
-              >
-                <TbBrandGithub /> Back
-              </Button>
-            )}
-          </div>
+          <Card.Footer className="bg-transparent border-0 p-0 mt-0">
+            <div className="d-flex flex-wrap gap-2 mt-auto">
+              {p.links.githubFront && (
+                <Button
+                  href={p.links.githubFront}
+                  target="_blank"
+                  variant="outline-light"
+                  className="btn-p-front flex-fill"
+                >
+                  <TbBrandGithub /> Frontend
+                </Button>
+              )}
+
+              {p.links.githubBack && (
+                <Button
+                  href={p.links.githubBack}
+                  target="_blank"
+                  variant="outline-light"
+                  className="btn-p-front flex-fill"
+                >
+                  <TbBrandGithub /> Backend
+                </Button>
+              )}
+
+              {p.links.demo && (
+                <Button
+                  href={p.links.demo}
+                  target="_blank"
+                  variant="primary"
+                  className="btn-p-demo flex-fill"
+                >
+                  <TbExternalLink /> Ver Demo en linea
+                </Button>
+              )}
+            </div>
+          </Card.Footer>
         </Card.Body>
       </Card>
     </>
