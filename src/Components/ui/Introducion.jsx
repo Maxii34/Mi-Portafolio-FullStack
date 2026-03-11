@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router";
 
 export const Introduccion = () => {
+  const redirecion = useNavigate();
+
+  const iratecno = () => {
+    redirecion("/tecno");
+  }
+
   return (
     <div className="">
       <motion.h1
@@ -10,7 +17,7 @@ export const Introduccion = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        Hola, soy <br /> 
+        Hola, soy <br />
         <span className="text-highlight">Maximiliano Ordoñez</span>
       </motion.h1>
 
@@ -22,17 +29,20 @@ export const Introduccion = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         <p>
-          Soy un desarrollador web enfocado en la creación de interfaces
-          cautivadoras, siempre orientado a simplificar y facilitar la
+          Soy desarrollador <strong>Full Stack</strong> con una fuerte
+          orientación al backend, donde diseño APIs, estructuras de datos y
+          arquitecturas que permiten construir aplicaciones web sólidas,
+          eficientes y escalables.
+        </p>
+
+        <p>
+          Mi conocimiento de frontend me permite complementar esa base técnica
+          con interfaces claras y funcionales, entendiendo así el funcionamiento
+          completo de una aplicación desde su lógica interna hasta la
           experiencia del usuario.
         </p>
-        <p>
-          Mi enfoque como <strong>Full Stack</strong> me permite entender el
-          ciclo completo de un proyecto: desde la fluidez visual que el usuario
-          percibe, hasta la arquitectura robusta y eficiente que lo sostiene.
-        </p>
         <p className="intro-quote">
-          "Explora mi trabajo y descubre cómo transformo desafíos en soluciones
+          " <b>Explora mis proyectos</b> y descubre cómo transformo desafíos en soluciones
           a través de un desarrollo sólido y eficiente."
         </p>
       </motion.div>
@@ -43,7 +53,7 @@ export const Introduccion = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <a href="#proyectos" className="btn btn-outline-primary btn-explore">
+        <a onClick={iratecno} href="#proyectos" className="btn btn-outline-primary btn-explore">
           Explorar mis proyectos
         </a>
       </motion.div>

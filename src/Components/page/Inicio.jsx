@@ -7,9 +7,10 @@ export const Inicio = () => {
   return (
     <Container
       id="sobre-mi"
-      className="d-flex flex-column justify-content-center align-items-center"
+      className="d-flex flex-column justify-content-center align-items-center pt-5 "
       style={{ minHeight: "110vh" }}
     >
+        <div className="pt-5"></div>
       <Row className="align-items-center w-100">
         <Col xs={12} md={7}>
           <Introduccion />
