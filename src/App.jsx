@@ -1,25 +1,26 @@
-import { Menu } from "./Components/shared/Menu"
-import { Footer } from "./Components/shared/Footer"
-import { Inicio } from "./Components/page/Inicio"
-import { SectorEducacion } from "./Components/page/SectorEducacion"
-import { SectorProyectos } from "./Components/page/SectorProyectos"
-import { SectorStack } from "./Components/page/SectorStack"
-import { SectorContacto } from "./Components/page/SectorContacto"
+import { Menu } from "./Components/shared/Menu";
+import { Footer } from "./Components/shared/Footer";
+import { Inicio } from "./Components/page/Inicio";
+import { Tecn } from "./Components/page/tecn";
+import { SectorContacto } from "./Components/page/SectorContacto";
+import { BrowserRouter, Routes, Route } from "react-router";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Menu />
+
       <main className="Color-Fondo">
-        <Inicio />
-        <SectorEducacion />
-        <SectorProyectos />
-        <SectorStack />
-        <SectorContacto />
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/tecno" element={<Tecn />} />
+          <Route path="/contacto" element={<SectorContacto />} />
+        </Routes>
       </main>
+
       <Footer />
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
