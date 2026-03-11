@@ -47,12 +47,20 @@
   align-items: center;
   gap: 8px;
   padding: 8px 20px !important;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 123, 255, 0.2) !important;
 }
 
 /* Botón primario (azul) */
 .btn-cv {
-  background-color: #007bff !important;
-  border: none !important;
+  background-color: #000 !important;
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.btn-git {
+  background-color: #000 !important;
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
 }
 
 /* Quitar subrayado del link */
