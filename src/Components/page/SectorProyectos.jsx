@@ -49,7 +49,7 @@ export const SectorProyectos = () => {
       <Carousel 
         className="pb-5" 
         indicators={true} 
-        interval={null}
+        interval={5000}
         prevIcon={<span className="carousel-control-prev-icon" style={{ marginTop: "-200px" }} />}
         nextIcon={<span className="carousel-control-next-icon" style={{ marginTop: "-200px" }} />}
       >

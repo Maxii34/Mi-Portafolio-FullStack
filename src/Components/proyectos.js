@@ -8,9 +8,9 @@ export const proyectos = [
     imagenes: ["/img/Dog1.png", "/img/Dog2.png", "/img/Dog3.png"],
     stack: ["React.js", "Node.js", "Express", "MongoDB", "JWT", "Bcrypt"],
     links: {
-      demo: "https://tu-demo.com",
-      githubFront: "https://github.com/Maxii34",
-      githubBack: "https://github.com/Maxii34",
+      demo: "https://dogtorveterinaria.netlify.app/",
+      githubFront: "https://github.com/Maxii34/ModuloN-2-Front",
+      githubBack: "https://github.com/Maxii34/Backend-DogTor",
     },
   },
   {
@@ -23,6 +23,8 @@ export const proyectos = [
     stack: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
     stackD: "Node.js Express MongoDB Mongoose JWT Bcrypt",
     links: {
+      demo: "",
+      githubFront: "",
       githubBack: "https://github.com/Maxii34",
     },
   },
@@ -36,7 +38,7 @@ export const proyectos = [
     stackB: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
     stackF: "Reack Bootstrap JavaScript HTML5 CSS3 React Router",
     links: {
-      demo: "https://sintaxhotelv2max.netlify.app",
+      demo: "https://sintaxhotelv2max.netlify.app/",
       githubFront: "https://github.com/Maxii34/ModuloN3-Front",
       githubBack: "https://github.com/Maxii34/ModuloN3-Back",
     },
@@ -92,8 +94,8 @@ export const proyectos = [
       "React JavaScript HTML5 CSS3 Bootstrap React-Bootstrap React-Router React-Hook-Form SweetAlert2",
     links: {
       demo: "https://petshopv2react.netlify.app/",
-      githubFront: "URL_DE_TU_REPO_FRONTEND",
-      githubBack: "URL_DE_TU_REPO_BACKEND",
+      githubFront: "https://github.com/Maxii34/PetShop-v2-React",
+      githubBack: "URL_DE_TU_REPO_BACKEND", //falta el backend de este proyecto
     },
   },
 ];
