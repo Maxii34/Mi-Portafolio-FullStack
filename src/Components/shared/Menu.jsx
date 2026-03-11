@@ -1,8 +1,21 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useNavigate } from "react-router";
 
 export const Menu = () => {
+  const redirecion = useNavigate();
+
+  const irahome = () => {
+    redirecion("/");
+  }
+  const iratecno = () => {
+    redirecion("/tecno");
+  }
+  const iracontacto = () => {
+    redirecion("/contacto");
+  }
+
   return (
     <Navbar 
       expand="lg" 
@@ -24,11 +37,11 @@ export const Menu = () => {
         <Navbar.Collapse id="navbarScroll">
           {/* mx-auto centra el contenido horizontalmente */}
           <Nav className="mx-auto my-2 my-lg-0 font-weight-bold">
-            <Nav.Link href="#sobre-mi" className="px-3 fs-5">Sobre Mí</Nav.Link> 
-            <Nav.Link href="#educacion" className="px-3 fs-5">Educación</Nav.Link>
-            <Nav.Link href="#proyectos" className="px-3 fs-5">Proyectos</Nav.Link>
-            <Nav.Link href="#habilidades" className="px-3 fs-5">Habilidades</Nav.Link>
-            <Nav.Link href="#contacto" className="px-3 fs-5">Contacto</Nav.Link>
+            <Nav.Link onClick={irahome} href="#sobre-mi" className="px-3 fs-5 menu-divider">Sobre Mí</Nav.Link> 
+            <Nav.Link onClick={irahome} href="#educacion" className="px-3 fs-5">Educación</Nav.Link>
+            <Nav.Link onClick={iratecno} href="#proyectos" className="px-3 fs-5">Proyectos</Nav.Link>
+            <Nav.Link onClick={iratecno} href="#habilidades" className="px-3 fs-5">Habilidades</Nav.Link>
+            <Nav.Link onClick={iracontacto} href="#contacto" className="px-3 fs-5">Contacto</Nav.Link>
           </Nav>
 
           {/* Espaciador para que el logo no se vea desplazado si quieres simetría perfecta */}
