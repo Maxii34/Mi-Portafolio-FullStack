@@ -1,7 +1,9 @@
+import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
+import { MdDownloading } from "react-icons/md";
 
 export const Menu = () => {
   const redirecion = useNavigate();
@@ -16,17 +18,17 @@ export const Menu = () => {
     redirecion("/contacto");
   };
 
-const abrirInstagram = () => {
-  window.open("https://www.instagram.com/codemax.dev", "_blank");
-};
+  const abrirInstagram = () => {
+    window.open("https://www.instagram.com/codemax.dev", "_blank");
+  };
 
-const abrirLinkedin = () => {
-  window.open("https://www.linkedin.com/in/maxiiordo%C3%B1ez/", "_blank");
-};
+  const abrirLinkedin = () => {
+    window.open("https://www.linkedin.com/in/maxiiordo%C3%B1ez/", "_blank");
+  };
 
-const abrirGitHub = () => {
-  window.open("https://github.com/Maxii34", "_blank");
-};
+  const abrirGitHub = () => {
+    window.open("https://github.com/Maxii34", "_blank");
+  };
 
   return (
     <Navbar
@@ -91,7 +93,8 @@ const abrirGitHub = () => {
                   d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
                   fill="currentColor"
                   fill-rule="evenodd"
-                />|
+                />
+                |
               </svg>
             </button>
 
@@ -120,6 +123,18 @@ const abrirGitHub = () => {
                 />
               </svg>
             </button>
+
+            <div className="">
+              <Button
+                as="a"
+                href="/CV-Maximiliano_Ordoñez.pdf"
+                download="CV_Maximiliano_Ordoñez.pdf"
+                variant="primary"
+                className="btn-custom btn-cv"
+              >
+                <MdDownloading className="fs-4" /> CV
+              </Button>
+            </div>
           </div>
         </Navbar.Collapse>
       </Container>
