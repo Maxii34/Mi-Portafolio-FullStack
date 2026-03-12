@@ -15,21 +15,6 @@ export const proyectos = [
   },
   {
     id: 2,
-    titulo: "Force Gim",
-    subtitulo: "Sistema de gestión para gimnasios",
-    descripcion:
-      "Backend enfocado en la lógica de negocio, automatización de pagos, renovaciones y control de accesos mediante tokens.",
-    imagenes: ["/img/SinImagen.png", "force2.jpg"],
-    stack: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
-    stackD: "Node.js Express MongoDB Mongoose JWT Bcrypt",
-    links: {
-      demo: "",
-      githubFront: "",
-      githubBack: "https://github.com/Maxii34",
-    },
-  },
-  {
-    id: 3,
     titulo: "Sintax Hotel",
     subtitulo: "Plataforma de Gestión Hotelera",
     descripcion:
@@ -44,7 +29,7 @@ export const proyectos = [
     },
   },
   {
-    id: 4,
+    id: 3,
     titulo: "Blog de Recetas",
     subtitulo: "Plataforma de Gestión de Recetas",
     descripcion:
@@ -64,7 +49,7 @@ export const proyectos = [
     },
   },
   {
-    id: 5,
+    id: 4,
     titulo: "Gestor de Tareas",
     subtitulo: "Aplicación Web para Gestión Tareas",
     descripcion:
@@ -83,7 +68,7 @@ export const proyectos = [
     },
   },
   {
-    id: 6,
+    id: 5,
     titulo: "Apolo PetShop",
     subtitulo: "Sistema de Tienda de Mascotas",
     descripcion:
@@ -95,7 +80,22 @@ export const proyectos = [
     links: {
       demo: "https://petshopv2react.netlify.app/",
       githubFront: "https://github.com/Maxii34/PetShop-v2-React",
-      githubBack: "URL_DE_TU_REPO_BACKEND", //falta el backend de este proyecto
+      githubBack: "URL_DE_TU_REPO_BACKEND",
+    },
+  },
+  {
+    id: 6,
+    titulo: "Force Gim",
+    subtitulo: "Sistema de gestión para gimnasios",
+    descripcion:
+      "Backend enfocado en la lógica de negocio, automatización de pagos, renovaciones y control de accesos mediante tokens.",
+    imagenes: ["/img/SinImagen.png", "force2.jpg"],
+    stack: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
+    stackD: "Node.js Express MongoDB Mongoose JWT Bcrypt",
+    links: {
+      demo: "",
+      githubFront: "",
+      githubBack: "https://github.com/Maxii34",
     },
   },
 ];
