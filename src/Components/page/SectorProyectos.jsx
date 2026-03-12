@@ -49,14 +49,14 @@ export const SectorProyectos = () => {
       <Carousel 
         className="pb-5" 
         indicators={true} 
-        interval={null}
+        interval={5000}
         prevIcon={<span className="carousel-control-prev-icon" style={{ marginTop: "-200px" }} />}
         nextIcon={<span className="carousel-control-next-icon" style={{ marginTop: "-200px" }} />}
       >
         {proyectosAgrupados.map((grupo, index) => (
           <Carousel.Item key={index} style={{ overflow: "visible" }}>
             <Row
-              className="g-4 justify-content-center px-5"
+              className="g-4 justify-content-center px-4"
               style={{ overflow: "visible", paddingTop: "20px" }}
             >
               {grupo.map((p, i) => (

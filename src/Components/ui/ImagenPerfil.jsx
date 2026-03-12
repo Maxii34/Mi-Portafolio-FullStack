@@ -44,8 +44,8 @@ export const ImagenPerfil = () => {
           <Button
             href="https://github.com/Maxii34"
             target="_blank"
-            variant="outline-primary"
-            className="btn-custom"
+            variant="primary"
+            className="btn-custom btn-git"
           >
             <TbBrandGithub className="fs-5" /> GitHub
           </Button>

@@ -8,26 +8,13 @@ export const proyectos = [
     imagenes: ["/img/Dog1.png", "/img/Dog2.png", "/img/Dog3.png"],
     stack: ["React.js", "Node.js", "Express", "MongoDB", "JWT", "Bcrypt"],
     links: {
-      demo: "https://tu-demo.com",
-      githubFront: "https://github.com/Maxii34",
-      githubBack: "https://github.com/Maxii34",
+      demo: "https://dogtorveterinaria.netlify.app/",
+      githubFront: "https://github.com/Maxii34/ModuloN-2-Front",
+      githubBack: "https://github.com/Maxii34/Backend-DogTor",
     },
   },
   {
     id: 2,
-    titulo: "Force Gim",
-    subtitulo: "Sistema de gestión para gimnasios",
-    descripcion:
-      "Backend enfocado en la lógica de negocio, automatización de pagos, renovaciones y control de accesos mediante tokens.",
-    imagenes: ["/img/SinImagen.png", "force2.jpg"],
-    stack: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
-    stackD: "Node.js Express MongoDB Mongoose JWT Bcrypt",
-    links: {
-      githubBack: "https://github.com/Maxii34",
-    },
-  },
-  {
-    id: 3,
     titulo: "Sintax Hotel",
     subtitulo: "Plataforma de Gestión Hotelera",
     descripcion:
@@ -36,13 +23,13 @@ export const proyectos = [
     stackB: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
     stackF: "Reack Bootstrap JavaScript HTML5 CSS3 React Router",
     links: {
-      demo: "https://sintaxhotelv2max.netlify.app",
+      demo: "https://sintaxhotelv2max.netlify.app/",
       githubFront: "https://github.com/Maxii34/ModuloN3-Front",
       githubBack: "https://github.com/Maxii34/ModuloN3-Back",
     },
   },
   {
-    id: 4,
+    id: 3,
     titulo: "Blog de Recetas",
     subtitulo: "Plataforma de Gestión de Recetas",
     descripcion:
@@ -62,15 +49,15 @@ export const proyectos = [
     },
   },
   {
-    id: 5,
+    id: 4,
     titulo: "Gestor de Tareas",
-    subtitulo: "Aplicación Web para la Gestión Tareas",
+    subtitulo: "Aplicación Web para Gestión Tareas",
     descripcion:
       "Aplicación full-stack que permite a los usuarios crear, administrar y realizar un seguimiento del estado de sus tareas mediante una interfaz intuitiva y operaciones CRUD completas.",
     imagenes: [
-      "/img/SinImagen.png",
-      "/img/GestorTareas02.png",
-      "/img/GestorTareas03.png",
+      "/img/GTarea01.png",
+      "/img/GTarea02.png",
+      "/img/GTarea03.png",
     ],
     stackB: "Nodejs Express MongoDB Mongoose Cors Morgan",
     stackF: "React Vite Bootstrap React-Bootstrap React-Router SweetAlert2",
@@ -81,7 +68,7 @@ export const proyectos = [
     },
   },
   {
-    id: 6,
+    id: 5,
     titulo: "Apolo PetShop",
     subtitulo: "Sistema de Tienda de Mascotas",
     descripcion:
@@ -92,8 +79,23 @@ export const proyectos = [
       "React JavaScript HTML5 CSS3 Bootstrap React-Bootstrap React-Router React-Hook-Form SweetAlert2",
     links: {
       demo: "https://petshopv2react.netlify.app/",
-      githubFront: "URL_DE_TU_REPO_FRONTEND",
+      githubFront: "https://github.com/Maxii34/PetShop-v2-React",
       githubBack: "URL_DE_TU_REPO_BACKEND",
+    },
+  },
+  {
+    id: 6,
+    titulo: "Force Gim",
+    subtitulo: "Sistema de gestión para gimnasios",
+    descripcion:
+      "Backend enfocado en la lógica de negocio, automatización de pagos, renovaciones y control de accesos mediante tokens.",
+    imagenes: ["/img/SinImagen.png", "force2.jpg"],
+    stack: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
+    stackD: "Node.js Express MongoDB Mongoose JWT Bcrypt",
+    links: {
+      demo: "",
+      githubFront: "",
+      githubBack: "https://github.com/Maxii34",
     },
   },
 ];
