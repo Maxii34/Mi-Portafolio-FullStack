@@ -27,7 +27,6 @@ export const SectorStack = () => {
       { name: "HTML5", icon: <SiHtml5 />, color: "#E34F26" },
       { name: "CSS3", icon: <SiCss3 />, color: "#1572B6" },
       { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
-      { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
       { name: "React", icon: <SiReact />, color: "#61DAFB" },
       { name: "Next.js", icon: <SiNextdotjs />, color: "#ffffff" },
       { name: "Tailwind", icon: <SiTailwindcss />, color: "#06B6D4" },
@@ -49,7 +48,6 @@ export const SectorStack = () => {
       { name: "Git", icon: <SiGit />, color: "#F05032" },
       { name: "GitHub", icon: <SiGithub />, color: "#ffffff" },
       { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
-      { name: "Docker", icon: <SiDocker />, color: "#2496ED" },
     ],
   },
 ];
