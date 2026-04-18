@@ -1,49 +1,135 @@
 import { useParams, Link } from "react-router";
 import { proyectos } from "../proyectos";
-import { Container, Row, Col, Carousel, Badge, Button } from "react-bootstrap";
+import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import {
   TbBrandGithub,
   TbExternalLink,
   TbChevronLeft,
   TbCode,
-  TbServer,
-  TbLayout,
 } from "react-icons/tb";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiBootstrap,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiMongoose,
+  SiJsonwebtokens,
+  SiVite,
+  SiReactrouter,
+  SiReacthookform,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiTypescript,
+  SiPostgresql,
+  SiGithub,
+  SiNetlify,
+} from "react-icons/si";
+
+// Mapeo detallado de tecnologías con sus iconos y colores de SectorStack
+const techConfig = {
+  "HTML5": { icon: <SiHtml5 />, color: "#E34F26" },
+  "CSS3": { icon: <SiCss3 />, color: "#1572B6" },
+  "JavaScript": { icon: <SiJavascript />, color: "#F7DF1E" },
+  "React": { icon: <SiReact />, color: "#61DAFB" },
+  "React.js": { icon: <SiReact />, color: "#61DAFB" },
+  "Next.js": { icon: <SiNextdotjs />, color: "#ffffff" },
+  "Tailwind": { icon: <SiTailwindcss />, color: "#06B6D4" },
+  "Bootstrap": { icon: <SiBootstrap />, color: "#7952B3" },
+  "React-Bootstrap": { icon: <SiBootstrap />, color: "#7952B3" },
+  "Node.js": { icon: <SiNodedotjs />, color: "#339933" },
+  "Nodejs": { icon: <SiNodedotjs />, color: "#339933" },
+  "Express": { icon: <SiExpress />, color: "#ffffff" },
+  "MongoDB": { icon: <SiMongodb />, color: "#47A248" },
+  "Mongoose": { icon: <SiMongoose />, color: "#880000" },
+  "JWT": { icon: <SiJsonwebtokens />, color: "#ffffff" },
+  "Vite": { icon: <SiVite />, color: "#646CFF" },
+  "React Router": { icon: <SiReactrouter />, color: "#CA4245" },
+  "React-Router": { icon: <SiReactrouter />, color: "#CA4245" },
+  "React-Hook-Form": { icon: <SiReacthookform />, color: "#EC5990" },
+  "SweetAlert2": { icon: <TbCode />, color: "#f8bb86" },
+  "PostgreSQL": { icon: <SiPostgresql />, color: "#4169E1" },
+  "GitHub": { icon: <SiGithub />, color: "#ffffff" },
+  "TypeScript": { icon: <SiTypescript />, color: "#3178C6" },
+  "Bcrypt": { icon: <TbCode />, color: "#ffffff" }, // Genérico si no hay oficial
+  "Cors": { icon: <TbCode />, color: "#ffffff" },
+  "Morgan": { icon: <TbCode />, color: "#ffffff" },
+};
 
 export const DetallesProyectos = () => {
   const { id } = useParams();
-  // Convertimos id a número para que coincida con la data en proyectos.js
   const proyecto = proyectos.find((p) => p.id === Number(id));
 
   if (!proyecto) {
     return (
       <Container className="py-5 text-center">
         <h2 className="text-white">Proyecto no encontrado</h2>
-        <Link to="/tecno" id="proyectos" className="btn btn-primary mt-3">
+        <Link to="/tecno" className="btn btn-primary mt-3">
           Volver a proyectos
         </Link>
       </Container>
     );
   }
 
-  // Función para normalizar y obtener el stack tecnológico
-  const getStack = (p) => {
-    let combined = [];
-    if (Array.isArray(p.stack)) combined = [...combined, ...p.stack];
-    else if (typeof p.stack === "string")
-      combined = [...combined, ...p.stack.split(" ")];
+  // Lógica para obtener el stack categorizado
+  const categorizeStack = (p) => {
+    const categories = {
+      frontend: [],
+      backend: [],
+      database: [],
+    };
 
-    if (p.stackB) combined = [...combined, ...p.stackB.split(" ")];
-    if (p.stackF) combined = [...combined, ...p.stackF.split(" ")];
-    if (p.stackD) combined = [...combined, ...p.stackD.split(" ")];
-    if (p.stack && typeof p.stack === "string")
-      combined = [...combined, ...p.stack.split(" ")];
+    const process = (str, cat) => {
+      if (!str) return;
+      const items = Array.isArray(str) ? str : str.split(/\s+/);
+      items.forEach(item => {
+        const cleanItem = item.trim().replace(/[,.-]$/, "");
+        if (cleanItem && !categories[cat].some(i => i.name === cleanItem)) {
+          categories[cat].push({
+            name: cleanItem,
+            ...(techConfig[cleanItem] || { icon: <TbCode />, color: "#ffffff" })
+          });
+        }
+      });
+    };
 
-    return [...new Set(combined.filter((s) => s && s.trim() !== ""))];
+    // Procesar campos específicos
+    process(p.stackF, 'frontend');
+    process(p.stackB, 'backend');
+    process(p.stackD, 'database');
+
+    // Si hay un stack general y las categorías están vacías, intentar inferir
+    if (p.stack) {
+      const generalItems = Array.isArray(p.stack) ? p.stack : p.stack.split(/\s+/);
+      generalItems.forEach(item => {
+        const cleanItem = item.trim().replace(/[,.-]$/, "");
+        const info = techConfig[cleanItem] || { icon: <TbCode />, color: "#ffffff" };
+        const entry = { name: cleanItem, ...info };
+        
+        // Inferencia básica
+        if (/Database|Mongo|SQL|Mongoose/i.test(cleanItem)) process(cleanItem, 'database');
+        else if (/Node|Express|JWT|Bcrypt|Server|Cors|Morgan/i.test(cleanItem)) process(cleanItem, 'backend');
+        else process(cleanItem, 'frontend');
+      });
+    }
+
+    return categories;
   };
 
-  const techStack = getStack(proyecto);
+  const stack = categorizeStack(proyecto);
+
+  const TechItem = ({ tech }) => (
+    <div className="tech-box-detail-page">
+      <span className="tech-icon-detail" style={{ color: tech.color }}>
+        {tech.icon}
+      </span>
+      <span className="tech-name-detail">{tech.name}</span>
+    </div>
+  );
 
   return (
     <motion.div
@@ -59,7 +145,7 @@ export const DetallesProyectos = () => {
 
         <div className="glass-detail-card">
           <Row className="g-5">
-            {/* Galería de Imágenes */}
+            {/* Columna Izquierda: Galería y Stack */}
             <Col lg={7}>
               <motion.div
                 initial={{ x: -50, opacity: 0 }}
@@ -67,7 +153,7 @@ export const DetallesProyectos = () => {
                 transition={{ delay: 0.2 }}
               >
                 <Carousel
-                  className="carousel-detail"
+                  className="carousel-detail mb-4"
                   indicators={proyecto.imagenes.length > 1}
                 >
                   {proyecto.imagenes.map((img, idx) => (
@@ -83,10 +169,51 @@ export const DetallesProyectos = () => {
                     </Carousel.Item>
                   ))}
                 </Carousel>
+
+                {/* Sección de Tecnologías - AHORA ABAJO DE LA IMAGEN */}
+                <motion.div 
+                   className="mt-5"
+                   initial={{ y: 20, opacity: 0 }}
+                   animate={{ y: 0, opacity: 1 }}
+                   transition={{ delay: 0.4 }}
+                >
+                  <h4 className="text-white mb-4 d-flex align-items-center gap-2">
+                    <TbCode className="text-primary" /> Stack del Proyecto
+                  </h4>
+                  
+                  <Row className="g-4">
+                    {stack.frontend.length > 0 && (
+                      <Col md={12}>
+                        <h6 className="text-primary text-uppercase small fw-bold mb-3">Frontend</h6>
+                        <div className="d-flex flex-wrap gap-3">
+                          {stack.frontend.map((t, i) => <TechItem key={i} tech={t} />)}
+                        </div>
+                      </Col>
+                    )}
+                    
+                    {stack.backend.length > 0 && (
+                      <Col md={12}>
+                        <h6 className="text-primary text-uppercase small fw-bold mb-3">Backend</h6>
+                        <div className="d-flex flex-wrap gap-3">
+                          {stack.backend.map((t, i) => <TechItem key={i} tech={t} />)}
+                        </div>
+                      </Col>
+                    )}
+
+                    {stack.database.length > 0 && (
+                      <Col md={12}>
+                        <h6 className="text-primary text-uppercase small fw-bold mb-3">Base de Datos</h6>
+                        <div className="d-flex flex-wrap gap-3">
+                          {stack.database.map((t, i) => <TechItem key={i} tech={t} />)}
+                        </div>
+                      </Col>
+                    )}
+                  </Row>
+                </motion.div>
               </motion.div>
             </Col>
 
-            {/* Información del Proyecto */}
+            {/* Columna Derecha: Información y Botones */}
             <Col lg={5}>
               <motion.div
                 initial={{ x: 50, opacity: 0 }}
@@ -96,37 +223,23 @@ export const DetallesProyectos = () => {
                 <h1 className="project-detail-title">{proyecto.titulo}</h1>
                 <h4 className="text-highlight mb-4">{proyecto.subtitulo}</h4>
 
-                <div className="mb-4">
-                  <h5 className="text-white d-flex align-items-center gap-2">
-                    <TbCode className="text-primary" /> Sobre el Proyecto
-                  </h5>
-                  <p className="text-white-50 leading-relaxed">
+                <div className="mb-5">
+                  <h5 className="text-white mb-3">Descripción</h5>
+                  <p className="text-white-50 leading-relaxed fs-5">
                     {proyecto.descripcion}
                   </p>
                 </div>
 
-                {/* Tecnologías */}
-                <div className="mb-5">
-                  <h5 className="text-white mb-3">Tecnologías Utilizadas</h5>
-                  <div className="d-flex flex-wrap gap-2">
-                    {techStack.map((tech, i) => (
-                      <span key={i} className="tech-badge-detail">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
                 {/* Botones de Acción */}
-                <div className="d-grid gap-3">
+                <div className="d-grid gap-3 mt-auto">
                   {proyecto.links.demo && (
                     <Button
                       href={proyecto.links.demo}
                       target="_blank"
                       variant="primary"
-                      className="btn-p-demo py-2 shadow-lg"
+                      className="btn-p-demo py-3 shadow-lg fs-5"
                     >
-                      <TbExternalLink size={20} className="me-2" /> Ver Demo en
+                      <TbExternalLink size={24} className="me-2" /> Ver Demo en
                       Vivo
                     </Button>
                   )}

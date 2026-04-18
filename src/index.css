@@ -551,3 +551,36 @@
     padding: 1.25rem;
   }
 }
+
+/* Mini Tech Boxes para Detalles */
+
+.tech-box-detail-page {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.tech-box-detail-page:hover {
+  background: rgba(0, 123, 255, 0.05);
+  border-color: #007bff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);
+}
+
+.tech-icon-detail {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.tech-name-detail {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
