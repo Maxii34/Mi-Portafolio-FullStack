@@ -88,14 +88,14 @@ export const proyectos = [
     titulo: "Force Gim",
     subtitulo: "Sistema de gestión para gimnasios",
     descripcion:
-      "Backend enfocado en la lógica de negocio, automatización de pagos, renovaciones y control de accesos mediante tokens.",
+      "El backend de ForceGim es el núcleo lógico del sistema, desarrollado con Node.js y Express. Incluye permisos avanzados (RBAC), integración con MongoDB y herramientas de análisis para el dashboard administrativo.",
     imagenes: ["/img/SinImagen.png", "force2.jpg"],
     stack: "Nodejs Express MongoDB Mongoose JWT Bcrypt",
     stackD: "Node.js Express MongoDB Mongoose JWT Bcrypt",
     links: {
       demo: "",
       githubFront: "",
-      githubBack: "https://github.com/Maxii34",
+      githubBack: "https://github.com/Maxii34/Force-Gym-Backend",
     },
   },
 ];

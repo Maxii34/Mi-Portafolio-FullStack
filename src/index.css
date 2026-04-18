@@ -96,7 +96,7 @@
 /* Contenedor del texto descriptivo */
 .intro-text-container {
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 1.6;
   color: #e0e0e0;
   max-width: 650px;
 }
@@ -207,6 +207,16 @@
   transform: translateY(-10px);
   background-color: rgba(255, 255, 255, 0.06) !important;
   box-shadow: 0 5px 3px rgba(32, 110, 228, 0.3);
+}
+
+.project-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Máximo 3 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1.5rem;
+  min-height: 4.5em; /* Aproximadamente 3 líneas para mantener consistencia */
 }
 
 .project-stack {
