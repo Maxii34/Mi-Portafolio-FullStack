@@ -1,11 +1,13 @@
 import { Card, Button } from "react-bootstrap";
 import { TbBrandGithub, TbExternalLink } from "react-icons/tb";
+import { Link } from "react-router";
 
 export const CardsProyectosFront = ({ p }) => {
   return (
     <>
       <Card className="project-card w-100 h-100">
         {/* IMAGEN PRINCIPAL DEL PROYECTO */}
+        <Link to={`/detalles/${p.id}`}> 
         <div className="project-img-container">
           <img
             className="d-block w-100 project-img"
@@ -13,7 +15,7 @@ export const CardsProyectosFront = ({ p }) => {
             alt={`Captura principal de ${p.titulo}`}
           />
         </div>
-
+        </Link>
         <Card.Body className="d-flex flex-column p-4">
           <Card.Title className="fw-bold fs-4 text-white">{p.titulo}</Card.Title>
           <Card.Subtitle className="mb-3 text-primary">

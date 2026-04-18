@@ -458,3 +458,96 @@
   width: 0;
   height: 0;
 }
+
+/* Detalles de Proyectos - Estilos Premium */
+
+.details-page-wrapper {
+  padding: 4rem 0;
+  min-height: 80vh;
+}
+
+.glass-detail-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 123, 255, 0.15);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.project-detail-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #fff, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-detail {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.carousel-detail img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.tech-badge-detail {
+  background: rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.3);
+  color: #007bff !important;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.tech-badge-detail:hover {
+  background: #007bff;
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.back-btn-custom {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #adb5bd !important;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+
+.back-btn-custom:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white !important;
+  border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .project-detail-title {
+    font-size: 2rem;
+  }
+  .carousel-detail img {
+    height: 250px;
+  }
+  .glass-detail-card {
+    padding: 1.25rem;
+  }
+}
