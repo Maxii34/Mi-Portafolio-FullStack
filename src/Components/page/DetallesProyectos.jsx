@@ -48,6 +48,7 @@ const techConfig = {
   MongoDB: { icon: <SiMongodb />, color: "#47A248" },
   Mongoose: { icon: <SiMongoose />, color: "#880000" },
   JWT: { icon: <SiJsonwebtokens />, color: "#ffffff" },
+  "JSON Web Token": { icon: <SiJsonwebtokens />, color: "#ffffff" },
   Vite: { icon: <SiVite />, color: "#646CFF" },
   "React Router": { icon: <SiReactrouter />, color: "#CA4245" },
   "React-Router": { icon: <SiReactrouter />, color: "#CA4245" },
@@ -56,14 +57,16 @@ const techConfig = {
   PostgreSQL: { icon: <SiPostgresql />, color: "#4169E1" },
   GitHub: { icon: <SiGithub />, color: "#ffffff" },
   TypeScript: { icon: <SiTypescript />, color: "#3178C6" },
-  Bcrypt: { icon: <TbCode />, color: "#ffffff" }, // Genérico si no hay oficial
+  Bcrypt: { icon: <TbCode />, color: "#ffffff" },
+  "Bcrypt.js": { icon: <TbCode />, color: "#ffffff" },
   Cors: { icon: <TbCode />, color: "#ffffff" },
   Morgan: { icon: <TbCode />, color: "#ffffff" },
 };
 
 export const DetallesProyectos = () => {
   const { id } = useParams();
-  const currentIndex = proyectos.findIndex((p) => p.id === Number(id));
+  // Buscamos directamente por el ID de string
+  const currentIndex = proyectos.findIndex((p) => p.id === id);
   const proyecto = proyectos[currentIndex];
 
   if (!proyecto) {
@@ -82,7 +85,7 @@ export const DetallesProyectos = () => {
     proyectos[(currentIndex - 1 + proyectos.length) % proyectos.length];
   const nextProject = proyectos[(currentIndex + 1) % proyectos.length];
 
-  // Lógica para obtener el stack categorizado
+  // Lógica para obtener el stack categorizado adaptado a la nueva estructura
   const categorizeStack = (p) => {
     const categories = {
       frontend: [],
@@ -90,47 +93,49 @@ export const DetallesProyectos = () => {
       database: [],
     };
 
-    const process = (str, cat) => {
-      if (!str) return;
-      const items = Array.isArray(str) ? str : str.split(/\s+/);
-      items.forEach((item) => {
-        const cleanItem = item.trim().replace(/[,.-]$/, "");
-        if (cleanItem && !categories[cat].some((i) => i.name === cleanItem)) {
-          categories[cat].push({
-            name: cleanItem,
-            ...(techConfig[cleanItem] || {
-              icon: <TbCode />,
-              color: "#ffffff",
-            }),
-          });
-        }
-      });
+    const processItem = (name, cat) => {
+      const cleanItem = name.trim().replace(/[,.-]$/, "");
+      if (cleanItem && !categories[cat].some((i) => i.name === cleanItem)) {
+        categories[cat].push({
+          name: cleanItem,
+          ...(techConfig[cleanItem] || {
+            icon: <TbCode />,
+            color: "#ffffff",
+          }),
+        });
+      }
     };
 
-    // Procesar campos específicos
-    process(p.stackF, "frontend");
-    process(p.stackB, "backend");
-    process(p.stackD, "database");
+    // Si el proyecto usa la nueva estructura de objeto
+    if (p.stack && typeof p.stack === "object" && !Array.isArray(p.stack)) {
+      if (p.stack.frontend)
+        p.stack.frontend.forEach((item) => processItem(item, "frontend"));
+      if (p.stack.backend)
+        p.stack.backend.forEach((item) => processItem(item, "backend"));
+      if (p.stack.database)
+        p.stack.database.forEach((item) => processItem(item, "database"));
+    } else {
+      // Fallback para estructura vieja o mixta
+      const processOld = (str, cat) => {
+        if (!str) return;
+        const items = Array.isArray(str) ? str : str.split(/\s+/);
+        items.forEach((item) => processItem(item, cat));
+      };
 
-    // Si hay un stack general y las categorías están vacías, intentar inferir
-    if (p.stack) {
-      const generalItems = Array.isArray(p.stack)
-        ? p.stack
-        : p.stack.split(/\s+/);
-      generalItems.forEach((item) => {
-        const cleanItem = item.trim().replace(/[,.-]$/, "");
-        const info = techConfig[cleanItem] || {
-          icon: <TbCode />,
-          color: "#ffffff",
-        };
+      processOld(p.stackF, "frontend");
+      processOld(p.stackB, "backend");
+      processOld(p.stackD, "database");
 
-        // Inferencia básica
-        if (/Database|Mongo|SQL|Mongoose/i.test(cleanItem))
-          process(cleanItem, "database");
-        else if (/Node|Express|JWT|Bcrypt|Server|Cors|Morgan/i.test(cleanItem))
-          process(cleanItem, "backend");
-        else process(cleanItem, "frontend");
-      });
+      if (p.stack && typeof p.stack === "string") {
+        p.stack.split(/\s+/).forEach((item) => {
+          const cleanItem = item.trim().replace(/[,.-]$/, "");
+          if (/Database|Mongo|SQL|Mongoose/i.test(cleanItem))
+            processItem(cleanItem, "database");
+          else if (/Node|Express|JWT|Bcrypt|Server|Cors|Morgan/i.test(cleanItem))
+            processItem(cleanItem, "backend");
+          else processItem(cleanItem, "frontend");
+        });
+      }
     }
 
     return categories;
