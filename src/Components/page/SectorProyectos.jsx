@@ -69,6 +69,7 @@ export const SectorProyectos = () => {
                   style={{ overflow: "visible" }}
                 >
                   <motion.div
+                    className="h-100 w-100 d-flex justify-content-center"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: i * 0.15 }}

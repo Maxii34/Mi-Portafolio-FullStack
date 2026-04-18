@@ -6,7 +6,7 @@ export const Introduccion = () => {
 
   const iratecno = () => {
     redirecion("/tecno");
-  }
+  };
 
   return (
     <div className="">
@@ -29,21 +29,22 @@ export const Introduccion = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         <p>
-          Soy desarrollador <strong>Full Stack</strong> con una fuerte
-          orientación al backend, donde diseño APIs, estructuras de datos y
-          arquitecturas que permiten construir aplicaciones web sólidas,
-          eficientes y escalables.
+          Soy <strong>Desarrollador Full Stack</strong> con especialización en
+          <strong> Backend</strong>, enfocado en la creación de APIs robustas,
+          bases de datos eficientes y arquitecturas escalables para aplicaciones
+          web modernas.
         </p>
 
         <p>
-          Mi conocimiento de frontend me permite complementar esa base técnica
-          con interfaces claras y funcionales, entendiendo así el funcionamiento
-          completo de una aplicación desde su lógica interna hasta la
-          experiencia del usuario.
+          Trabajo principalmente en la lógica del negocio, autenticación,
+          seguridad, rendimiento e integración entre sistemas, asegurando
+          soluciones sólidas y mantenibles.
         </p>
-        <p className="intro-quote">
-          " <b>Explora mis proyectos</b> y descubre cómo transformo desafíos en soluciones
-          a través de un desarrollo sólido y eficiente."
+
+        <p>
+          Mi experiencia en frontend me permite comprender el flujo completo del
+          producto y colaborar en interfaces funcionales, ofreciendo una visión
+          integral del desarrollo.
         </p>
       </motion.div>
 
@@ -53,7 +54,11 @@ export const Introduccion = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <a onClick={iratecno} href="#proyectos" className="btn btn-outline-primary btn-explore">
+        <a
+          onClick={iratecno}
+          href="#proyectos"
+          className="btn btn-outline-primary btn-explore"
+        >
           Explorar mis proyectos
         </a>
       </motion.div>
