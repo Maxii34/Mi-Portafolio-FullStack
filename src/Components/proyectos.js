@@ -106,10 +106,10 @@ export const proyectos = [
   {
     id: "project-apolo-petshop",
     titulo: "Apolo PetShop",
-    subtitulo: "E-commerce & Catálogo de Productos Veterinarios",
+    subtitulo: "E-commerce especializado en productos para mascotas",
     descripcion:
-      "Plataforma orientada al comercio electrónico para el sector veterinario. El sistema permite una administración dinámica del catálogo de productos, integrando validaciones avanzadas de formularios y una interfaz responsiva optimizada para la conversión. Implementa una arquitectura robusta para el manejo de inventario y una navegación intuitiva para el usuario final.",
-    imagenes: ["/img/Apolo01.png", "/img/Apolo02.png", "/img/Apolo03.png"],
+      "Plataforma integral de comercio electrónico para la venta y distribución de productos para mascotas. El sistema permite una gestión dinámica de un catálogo que incluye alimentos, accesorios y juguetes, integrando un flujo de pago seguro y un panel administrativo para el control de inventario. Incluye funcionalidades avanzadas de filtrado por tipo de animal y categoría, optimizando la experiencia de compra del usuario.",
+    imagenes: ["/img/Apolo01.png", "/img/Apolo02.png", "/img/Apolo03.png", "/img/Apolo04.png", "/img/Apolo05.png", "/img/Apolo06.png"],
     stack: {
       frontend: [
         "React.js",
@@ -120,15 +120,26 @@ export const proyectos = [
         "React Hook Form",
         "SweetAlert2",
       ],
-      backend: ["Node.js", "Express"],
-      database: ["MongoDB"],
+      backend: [
+        "Node.js", 
+        "Express", 
+        "JWT (Autenticación)", 
+        "Mercado Pago SDK", // Implementado para procesar las compras del carrito
+        "Cloudinary API",   // Usado para las imágenes de productos
+        "Multer",           // Gestión de carga de archivos
+        "Bcrypt",           // Cifrado de seguridad
+      ],
+      database: [
+        "MongoDB", 
+        "Mongoose"          // Modelado de productos, usuarios y órdenes
+      ],
     },
     links: {
-      demo: "https://petshopv2react.netlify.app/",
+      demo: "https://petshop-v2-apolo.netlify.app/",
       githubFront: "https://github.com/Maxii34/PetShop-v2-React",
-      githubBack: "https://github.com/Maxii34/PetShop-v2-React", // Nota: Reemplazar si tienes un repo de backend separado
+      githubBack: "https://github.com/Maxii34/Backend-Petshopv2", 
     },
-  },
+},
   {
     id: "project-force-gim",
     titulo: "ForceGim",
