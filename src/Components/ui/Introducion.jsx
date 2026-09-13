@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router";
 
 export const Introduccion = () => {
-  const redirecion = useNavigate();
-
-  const iratecno = () => {
-    redirecion("/tecno");
+  const irAProyectos = (e) => {
+    e.preventDefault();
+    document.getElementById("proyectos")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -55,7 +53,7 @@ export const Introduccion = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         <a
-          onClick={iratecno}
+          onClick={irAProyectos}
           href="#proyectos"
           className="btn btn-outline-primary btn-explore"
         >

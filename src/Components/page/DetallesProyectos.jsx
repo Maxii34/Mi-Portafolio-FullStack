@@ -73,7 +73,7 @@ export const DetallesProyectos = () => {
     return (
       <Container className="py-5 text-center">
         <h2 className="text-white">Proyecto no encontrado</h2>
-        <Link to="/tecno" className="btn btn-primary mt-3">
+        <Link to="/" className="btn btn-primary mt-3">
           Volver a proyectos
         </Link>
       </Container>
@@ -163,7 +163,7 @@ export const DetallesProyectos = () => {
     >
       <Container>
         <div className="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
-          <Link to="/tecno#proyectos" className="back-btn-custom m-0">
+          <Link to="/#proyectos" className="back-btn-custom m-0">
             <TbChevronLeft size={20} /> Volver a Proyectos
           </Link>
 

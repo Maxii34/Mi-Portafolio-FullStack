@@ -35,7 +35,7 @@ export const CardsProyectosFront = ({ p }) => {
                   variant="outline-light"
                   className="btn-p-front flex-fill"
                 >
-                  <TbBrandGithub /> Frontend
+                  <TbBrandGithub /> Front
                 </Button>
               )}
 
@@ -46,7 +46,7 @@ export const CardsProyectosFront = ({ p }) => {
                   variant="outline-light"
                   className="btn-p-front flex-fill"
                 >
-                  <TbBrandGithub /> Backend
+                  <TbBrandGithub /> Back
                 </Button>
               )}
 

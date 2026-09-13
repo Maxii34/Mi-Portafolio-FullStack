@@ -2,20 +2,22 @@ import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import { MdDownloading } from "react-icons/md";
 
 export const Menu = () => {
-  const redirecion = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const irahome = () => {
-    redirecion("/");
-  };
-  const iratecno = () => {
-    redirecion("/tecno");
-  };
-  const iracontacto = () => {
-    redirecion("/contacto");
+  const irASeccion = (id) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const abrirInstagram = () => {
@@ -52,31 +54,35 @@ export const Menu = () => {
         <Navbar.Collapse id="navbarScroll">
           <Nav className="mx-auto my-2 my-lg-0 font-weight-bold">
             <Nav.Link
-              onClick={irahome}
+              onClick={() => irASeccion("sobre-mi")}
               href="#sobre-mi"
               className="px-3 fs-5 menu-divider"
             >
               Sobre Mí
             </Nav.Link>
-            <Nav.Link onClick={irahome} href="#educacion" className="px-3 fs-5">
+            <Nav.Link
+              onClick={() => irASeccion("educacion")}
+              href="#educacion"
+              className="px-3 fs-5"
+            >
               Educación
             </Nav.Link>
             <Nav.Link
-              onClick={iratecno}
+              onClick={() => irASeccion("proyectos")}
               href="#proyectos"
               className="px-3 fs-5"
             >
               Proyectos
             </Nav.Link>
             <Nav.Link
-              onClick={iratecno}
+              onClick={() => irASeccion("habilidades")}
               href="#habilidades"
               className="px-3 fs-5"
             >
               Habilidades
             </Nav.Link>
             <Nav.Link
-              onClick={iracontacto}
+              onClick={() => irASeccion("contacto")}
               href="#contacto"
               className="px-3 fs-5"
             >
