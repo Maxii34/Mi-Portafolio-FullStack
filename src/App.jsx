@@ -21,16 +21,16 @@ const PaginaUnica = () => {
 function App() {
   return (
     <BrowserRouter>
-      <Menu />
-
-      <main className="Color-Fondo">
-        <Routes>
-          <Route path="/" element={<PaginaUnica />} />
-          <Route path="/detalles/:id" element={<DetallesProyectos />} />
-        </Routes>
-      </main>
-
-      <Footer />
+      <div className="min-h-screen bg-slate-950 text-slate-200 antialiased">
+        <Menu />
+        <main className="relative bg-gradient-to-b from-[#060d24] via-slate-950 to-black">
+          <Routes>
+            <Route path="/" element={<PaginaUnica />} />
+            <Route path="/detalles/:id" element={<DetallesProyectos />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

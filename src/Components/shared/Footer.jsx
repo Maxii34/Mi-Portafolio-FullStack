@@ -1,4 +1,3 @@
-import { Container, Row, Col } from "react-bootstrap";
 import {
   TbBrandGithub,
   TbBrandLinkedin,
@@ -7,88 +6,79 @@ import {
 } from "react-icons/tb";
 import Swal from "sweetalert2";
 
-
 export const Footer = () => {
   const anioActual = new Date().getFullYear();
 
-const abrirInstagram = () => {
-  window.open("https://www.instagram.com/codemax.dev", "_blank");
-};
-
-const abrirLinkedin = () => {
-  window.open("https://www.linkedin.com/in/maxiiordo%C3%B1ez/", "_blank");
-};
-
-const abrirGitHub = () => {
-  window.open("https://github.com/Maxii34", "_blank");
-};
+  const abrir = (url) => window.open(url, "_blank");
 
   const copiarCorreo = () => {
     navigator.clipboard.writeText("exemaxi32@gmail.com");
-
     Swal.fire({
       title: "¡Copiado!",
       text: "Correo copiado al portapapeles",
       icon: "success",
       timer: 1500,
       showConfirmButton: false,
-      background: "#1a1a1a",
+      background: "#0f172a",
       color: "#ffffff",
     });
   };
 
+  const iconBtn =
+    "flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-slate-400 transition hover:-translate-y-1 hover:border-sky-400/60 hover:text-sky-400";
+
   return (
-    <footer className="footer-custom">
-      <Container>
-        <Row className="text-center justify-content-center">
-          <Col md={6}>
-            <div className="footer-logo">
-              Maxi<span className="text-highlight">.dev</span>
-            </div>
-            <p className="text-white-50 mt-2">
-              Transformando desafíos en soluciones digitales robustas.
-            </p>
-            <span className="text-white-50 mt-2">Ultima Actualizacion: 22/04/2026</span>
+    <footer className="border-t border-white/10 bg-[#05070f]">
+      <div className="mx-auto max-w-6xl px-4 py-12 text-center sm:px-6">
+        <div className="text-2xl font-extrabold tracking-tight text-white">
+          Maxi<span className="text-sky-400">.dev</span>
+        </div>
+        <p className="mx-auto mt-2 max-w-md text-sm text-slate-400">
+          Transformando desafíos en soluciones digitales robustas.
+        </p>
+        <p className="mt-1 text-xs text-slate-500">
+          Última actualización: 22/04/2026
+        </p>
 
-            <div className="footer-divider"></div>
- 
-            <div className="d-flex justify-content-center">
-              <span
-                onClick={abrirGitHub}
-                rel="noreferrer"
-                className="footer-link-social"
-              >
-                <TbBrandGithub />
-              </span>
-              <span
-                onClick={abrirLinkedin}
-                rel="noreferrer"
-                className="footer-link-social"
-              >
-                <TbBrandLinkedin />
-              </span>
-              <span
-                onClick={abrirInstagram}
-                rel="noreferrer"
-                className="footer-link-social"
-              >
-                <TbBrandInstagram />
-              </span>
-              <span
-                onClick={copiarCorreo}
-                className="footer-link-social"
-                style={{ cursor: "pointer" }}
-              >
-                <TbMail />
-              </span>
-            </div>
+        <div className="mx-auto my-6 h-0.5 w-12 rounded bg-gradient-to-r from-blue-600 to-sky-400" />
 
-            <p className="footer-text">
-              ©  {anioActual} - Todos los derechos reservados. 
-            </p>
-          </Col>
-        </Row>
-      </Container>
+        <div className="flex items-center justify-center gap-3">
+          <button
+            onClick={() => abrir("https://github.com/Maxii34")}
+            className={iconBtn}
+            aria-label="GitHub"
+          >
+            <TbBrandGithub />
+          </button>
+          <button
+            onClick={() =>
+              abrir("https://www.linkedin.com/in/maxiiordo%C3%B1ez/")
+            }
+            className={iconBtn}
+            aria-label="LinkedIn"
+          >
+            <TbBrandLinkedin />
+          </button>
+          <button
+            onClick={() => abrir("https://www.instagram.com/codemax.dev")}
+            className={iconBtn}
+            aria-label="Instagram"
+          >
+            <TbBrandInstagram />
+          </button>
+          <button
+            onClick={copiarCorreo}
+            className={iconBtn}
+            aria-label="Copiar correo"
+          >
+            <TbMail />
+          </button>
+        </div>
+
+        <p className="mt-6 text-xs text-slate-500">
+          © {anioActual} - Todos los derechos reservados.
+        </p>
+      </div>
     </footer>
   );
 };

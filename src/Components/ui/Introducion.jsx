@@ -7,59 +7,76 @@ export const Introduccion = () => {
   };
 
   return (
-    <div className="">
+    <div>
       <motion.h1
-        className="intro-title"
+        className="mt-4 text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
       >
         Hola, soy <br />
-        <span className="text-highlight">Maximiliano Ordoñez</span>
+        <span className="text-gradient">Maximiliano Ordoñez</span>
       </motion.h1>
 
       <motion.div
-        className="intro-text-container"
+        className="mt-5 max-w-xl space-y-4 text-[15px] leading-relaxed text-slate-400 sm:text-base"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         viewport={{ once: false, amount: 0.3 }}
       >
         <p>
-          Soy <strong>Desarrollador Full Stack</strong> con especialización en
-          <strong> Backend</strong>, enfocado en la creación de APIs robustas,
-          bases de datos eficientes y arquitecturas escalables para aplicaciones
-          web modernas.
+          Soy <strong className="font-semibold text-slate-100">Desarrollador Full Stack</strong>{" "}
+          con especialización en <strong className="font-semibold text-slate-100">Backend</strong>,
+          enfocado en APIs robustas, bases de datos eficientes y arquitecturas
+          escalables.
         </p>
-
         <p>
-          Trabajo principalmente en la lógica del negocio, autenticación,
-          seguridad, rendimiento e integración entre sistemas, asegurando
-          soluciones sólidas y mantenibles.
-        </p>
-
-        <p>
-          Mi experiencia en frontend me permite comprender el flujo completo del
-          producto y colaborar en interfaces funcionales, ofreciendo una visión
-          integral del desarrollo.
+          Trabajo en lógica de negocio, autenticación, seguridad, rendimiento e
+          integración entre sistemas, asegurando soluciones sólidas y
+          mantenibles.
         </p>
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
+        className="mt-7 flex flex-wrap gap-3"
+        initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         viewport={{ once: false, amount: 0.3 }}
       >
         <a
           onClick={irAProyectos}
           href="#proyectos"
-          className="btn btn-outline-primary btn-explore"
+          className="inline-flex items-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/30 transition hover:-translate-y-0.5 hover:bg-blue-500"
         >
-          Explorar mis proyectos
+          Explorar mis proyectos →
+        </a>
+        <a
+          href="#contacto"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-sky-400/50 hover:text-white"
+        >
+          Contactarme
         </a>
       </motion.div>
+
+      <div className="mt-8 flex gap-8 border-t border-white/10 pt-6">
+        {[
+          ["6+", "Proyectos"],
+          ["MERN", "Stack"],
+          ["REST", "APIs"],
+        ].map(([n, l]) => (
+          <div key={l}>
+            <div className="text-2xl font-extrabold text-white">{n}</div>
+            <div className="text-xs uppercase tracking-widest text-slate-500">{l}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
