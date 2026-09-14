@@ -1,6 +1,62 @@
 import { GiAchievement } from "react-icons/gi";
+import { TbArrowRight } from "react-icons/tb";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 import { estudios } from "../estudios";
+
+const estadoColor = (periodo = "") => {
+  if (/en curso/i.test(periodo)) return "bg-amber-400";
+  if (/finalizado|completado/i.test(periodo)) return "bg-emerald-400";
+  return "bg-sky-400";
+};
+
+const EstudioCard = ({ estudio, index }) => {
+  const total = estudio.competencias?.length ?? 0;
+
+  return (
+    <motion.article
+      className="glass card-hover flex h-full flex-col rounded-2xl p-5"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: (index % 3) * 0.12 }}
+      viewport={{ once: false, amount: 0.2 }}
+    >
+      <div className="flex items-center justify-between gap-2">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-600/15 px-3 py-1 text-[11px] font-semibold text-sky-300">
+          <GiAchievement size={14} /> {estudio.periodo}
+        </span>
+        <span
+          className={`h-2 w-2 shrink-0 rounded-full ${estadoColor(estudio.periodo)}`}
+          title={estudio.periodo}
+        />
+      </div>
+
+      <h3 className="mt-3 text-base font-bold leading-snug text-white">
+        {estudio.institucion}
+      </h3>
+      <p className="mt-1 text-[13px] font-medium text-sky-300/90">
+        {estudio.titulo}
+      </p>
+      <p className="mt-2.5 line-clamp-3 text-[13px] leading-relaxed text-slate-400">
+        {estudio.descripcion}
+      </p>
+
+      <div className="mt-auto pt-4">
+        <div className="flex items-center justify-between border-t border-white/10 pt-3">
+          <span className="text-xs text-slate-500">
+            {total} {total === 1 ? "módulo" : "módulos"}
+          </span>
+          <Link
+            to={`/estudios#estudio-${estudio.id}`}
+            className="inline-flex items-center gap-1 text-xs font-semibold text-sky-300 transition hover:gap-2 hover:text-white"
+          >
+            Ver programa <TbArrowRight size={14} />
+          </Link>
+        </div>
+      </div>
+    </motion.article>
+  );
+};
 
 export const SectorEducacion = () => {
   return (
@@ -20,42 +76,9 @@ export const SectorEducacion = () => {
         </h2>
       </motion.div>
 
-      <div className="mt-8 grid gap-5 md:grid-cols-2">
+      <div className="mt-8 grid items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
         {estudios.map((estudio, index) => (
-          <motion.article
-            key={estudio.id}
-            className="glass card-hover rounded-2xl p-6"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.12 }}
-            viewport={{ once: false, amount: 0.2 }}
-          >
-            <div className="inline-flex items-center gap-2 rounded-full bg-blue-600/15 px-3 py-1 text-xs font-semibold text-sky-300">
-              <GiAchievement /> {estudio.periodo}
-            </div>
-            <h3 className="mt-3 text-xl font-bold text-white">
-              {estudio.institucion}
-            </h3>
-            <p className="mt-1 text-sm font-medium text-sky-300/90">
-              {estudio.titulo}
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-400">
-              {estudio.descripcion}
-            </p>
-            {estudio.competencias && (
-              <div className="mt-4 flex flex-wrap gap-2 border-t border-white/10 pt-4">
-                {estudio.competencias.map((c) => (
-                  <span
-                    key={c.label}
-                    title={c.items}
-                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300"
-                  >
-                    {c.label}
-                  </span>
-                ))}
-              </div>
-            )}
-          </motion.article>
+          <EstudioCard key={estudio.id} estudio={estudio} index={index} />
         ))}
       </div>
     </div>

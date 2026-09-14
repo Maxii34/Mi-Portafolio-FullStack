@@ -6,6 +6,7 @@ import { SectorStack } from "./Components/page/SectorStack";
 import { SectorContacto } from "./Components/page/SectorContacto";
 import { BrowserRouter, Routes, Route } from "react-router";
 import { DetallesProyectos } from "./Components/page/DetallesProyectos";
+import { DetallesEstudios } from "./Components/page/DetallesEstudios";
 
 const PaginaUnica = () => {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path="/" element={<PaginaUnica />} />
             <Route path="/detalles/:id" element={<DetallesProyectos />} />
+            <Route path="/estudios" element={<DetallesEstudios />} />
           </Routes>
         </main>
         <Footer />
