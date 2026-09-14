@@ -26,7 +26,7 @@ export const estudios = [
     id: 2,
     institucion: "RollingCode School - Ready to Code",
     titulo: "Bootcamp de Especialización (Ready To Code)",
-    periodo: "2026 - 99% Completado",
+    periodo: "2026 - Finalizado",
     descripcion:
       "Bootcamp intensivo on-demand orientado a quienes ya conocen programación y buscan un nivel técnico más sólido y profesional. Aborda metodologías, herramientas y buenas prácticas usadas por equipos de desarrollo reales: bases de datos SQL con Prisma, control de versiones avanzado, contenedorización con Docker, arquitectura RESTful con middlewares y NextAuth, debugging, lógica de programación orientada a entrevistas técnicas, y arquitecturas para APIs.",
     competencias: [

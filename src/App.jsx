@@ -7,6 +7,7 @@ import { SectorContacto } from "./Components/page/SectorContacto";
 import { BrowserRouter, Routes, Route } from "react-router";
 import { DetallesProyectos } from "./Components/page/DetallesProyectos";
 import { DetallesEstudios } from "./Components/page/DetallesEstudios";
+import { TodosProyectos } from "./Components/page/TodosProyectos";
 
 const PaginaUnica = () => {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/" element={<PaginaUnica />} />
             <Route path="/detalles/:id" element={<DetallesProyectos />} />
             <Route path="/estudios" element={<DetallesEstudios />} />
+            <Route path="/proyectos" element={<TodosProyectos />} />
           </Routes>
         </main>
         <Footer />

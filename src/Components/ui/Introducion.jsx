@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { proyectos } from "../proyectos";
 
 export const Introduccion = () => {
   const irAProyectos = (e) => {
@@ -67,7 +68,7 @@ export const Introduccion = () => {
 
       <div className="mt-8 flex gap-8 border-t border-white/10 pt-6">
         {[
-          ["6+", "Proyectos"],
+          [`${proyectos.length}`, "Proyectos"],
           ["MERN", "Stack"],
           ["REST", "APIs"],
         ].map(([n, l]) => (

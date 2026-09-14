@@ -1,7 +1,7 @@
 import { TbBrandGithub, TbExternalLink } from "react-icons/tb";
 import { Link } from "react-router";
 
-export const CardsProyectosFront = ({ p }) => {
+export const CardsProyectosFront = ({ p, isNuevo = false }) => {
   return (
     <article className="glass card-hover flex h-full flex-col overflow-hidden rounded-2xl">
       <Link to={`/detalles/${p.id}`} className="group relative block overflow-hidden">
@@ -15,6 +15,11 @@ export const CardsProyectosFront = ({ p }) => {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 to-transparent opacity-0 transition group-hover:opacity-100" />
+        {isNuevo && (
+          <span className="absolute left-3 top-3 rounded-full bg-emerald-500 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-950 shadow-lg">
+            Nuevo
+          </span>
+        )}
       </Link>
 
       <div className="flex flex-1 flex-col p-5">
