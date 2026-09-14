@@ -109,7 +109,14 @@ export const proyectos = [
     subtitulo: "E-commerce especializado en productos para mascotas",
     descripcion:
       "Plataforma integral de comercio electrónico para la venta y distribución de productos para mascotas. El sistema permite una gestión dinámica de un catálogo que incluye alimentos, accesorios y juguetes, integrando un flujo de pago seguro y un panel administrativo para el control de inventario. Incluye funcionalidades avanzadas de filtrado por tipo de animal y categoría, optimizando la experiencia de compra del usuario.",
-    imagenes: ["/img/Apolo01.png", "/img/Apolo02.png", "/img/Apolo03.png", "/img/Apolo04.png", "/img/Apolo05.png", "/img/Apolo06.png"],
+    imagenes: [
+      "/img/Apolo01.png",
+      "/img/Apolo02.png",
+      "/img/Apolo03.png",
+      "/img/Apolo04.png",
+      "/img/Apolo05.png",
+      "/img/Apolo06.png",
+    ],
     stack: {
       frontend: [
         "React.js",
@@ -121,47 +128,91 @@ export const proyectos = [
         "SweetAlert2",
       ],
       backend: [
-        "Node.js", 
-        "Express", 
-        "JWT (Autenticación)", 
+        "Node.js",
+        "Express",
+        "JWT (Autenticación)",
         "Mercado Pago SDK", // Implementado para procesar las compras del carrito
-        "Cloudinary API",   // Usado para las imágenes de productos
-        "Multer",           // Gestión de carga de archivos
-        "Bcrypt",           // Cifrado de seguridad
+        "Cloudinary API", // Usado para las imágenes de productos
+        "Multer", // Gestión de carga de archivos
+        "Bcrypt", // Cifrado de seguridad
       ],
       database: [
-        "MongoDB", 
-        "Mongoose"          // Modelado de productos, usuarios y órdenes
+        "MongoDB",
+        "Mongoose", // Modelado de productos, usuarios y órdenes
       ],
     },
     links: {
       demo: "https://petshop-v2-apolo.netlify.app/",
       githubFront: "https://github.com/Maxii34/PetShop-v2-React",
-      githubBack: "https://github.com/Maxii34/Backend-Petshopv2", 
+      githubBack: "https://github.com/Maxii34/Backend-Petshopv2",
     },
-},
+  },
   {
     id: "project-force-gim",
     titulo: "ForceGim",
-    subtitulo: "Backend Engine para Gestión de Centros de Fitness",
+    subtitulo: "Sistema de Gestión Integral para Gimnasios",
     descripcion:
-      "Núcleo lógico de alto rendimiento diseñado para la administración integral de gimnasios. Implementa un sistema avanzado de seguridad con Control de Acceso Basado en Roles (RBAC), automatización de membresías y una arquitectura de base de datos optimizada para el análisis de métricas en tiempo real. Ideal para soportar dashboards administrativos con gestión de pagos y control de acceso.",
-    imagenes: ["/img/SinImagen.png", "force2.jpg"],
+      "Plataforma full stack para la administración operativa de gimnasios. El backend (Node.js + Express + MongoDB) centraliza el padrón de socios, membresías, renovaciones y estadísticas financieras, con un sistema de roles (Superadmin, Admin, Moderador) mediante JWT y Bcrypt, y automatización de vencimientos vía Cron Jobs. El frontend, desarrollado en Next.js 16 con React 19 y TypeScript, ofrece un panel administrativo para gestionar socios, membresías, renovaciones e ingresos, con dashboard de métricas en tiempo real.",
+    imagenes: ["/img/iron01.png", "/img/iron02.png", "/img/iron03.png"],
     stack: {
-      frontend: [], // Listo para cuando integres el frontend
+      frontend: [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "Lucide React",
+        "SweetAlert2",
+      ],
       backend: [
         "Node.js",
         "Express",
         "JSON Web Token",
         "Bcrypt.js",
         "Mongoose",
+        "Node-Cron",
       ],
       database: ["MongoDB"],
     },
     links: {
-      demo: "",
-      githubFront: "",
+      demo: "https://irongim-sistema-gestor.vercel.app",
+      githubFront: "https://github.com/Maxii34/Sistema-GestorIntegral",
       githubBack: "https://github.com/Maxii34/Force-Gym-Backend",
+    },
+  },
+
+  {
+    id: "project-gestor-inventario",
+    titulo: "Gestor de Inventario",
+    subtitulo: "Sistema Full Stack de Inventario, Ventas y Stock",
+    descripcion:
+      "Plataforma full stack pensada para pequeños y medianos negocios. El backend (Node.js + Express + TypeScript + Prisma + PostgreSQL) administra productos, categorías, clientes, movimientos de stock (entradas, salidas, ajustes) y ventas, con autenticación JWT y refresh token, roles Admin/Vendedor, transacciones atómicas para evitar inconsistencias de stock, y cobros integrados con Mercado Pago (Checkout Pro) vía webhook. El frontend, en Next.js con React y TypeScript, ofrece un panel administrativo con dashboard de métricas, control de stock con alertas de bajo/crítico, ventas presenciales y a distancia con link de pago + código QR y polling de estado, y gestión de usuarios con rutas protegidas por rol.",
+    imagenes: ["/img/gestor01.png", "/img/gestor02.png", "/img/gestor03.png"],
+    stack: {
+      frontend: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Motion",
+        "React Icons",
+        "QRCode.react",
+      ],
+      backend: [
+        "Node.js",
+        "Express",
+        "TypeScript",
+        "Prisma",
+        "JSON Web Token",
+        "Bcrypt",
+        "Zod",
+        "Mercado Pago (Checkout Pro)",
+      ],
+      database: ["PostgreSQL"],
+    },
+    links: {
+      demo: "https://sistema-inventario-woad.vercel.app",
+      githubFront: "https://github.com/Maxii34/Gestor-Inventario",
+      githubBack: "https://github.com/Maxii34/Gestor-Inventario-back",
     },
   },
 ];
