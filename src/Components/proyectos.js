@@ -153,7 +153,7 @@ export const proyectos = [
     subtitulo: "Sistema de Gestión Integral para Gimnasios",
     descripcion:
       "Plataforma full stack para la administración operativa de gimnasios. El backend (Node.js + Express + MongoDB) centraliza el padrón de socios, membresías, renovaciones y estadísticas financieras, con un sistema de roles (Superadmin, Admin, Moderador) mediante JWT y Bcrypt, y automatización de vencimientos vía Cron Jobs. El frontend, desarrollado en Next.js 16 con React 19 y TypeScript, ofrece un panel administrativo para gestionar socios, membresías, renovaciones e ingresos, con dashboard de métricas en tiempo real.",
-    imagenes: ["/img/SinImagen.png", "force2.jpg"],
+    imagenes: ["/img/iron01.png", "/img/iron02.png", "/img/iron03.png"],
     stack: {
       frontend: [
         "Next.js 16",
@@ -186,7 +186,7 @@ export const proyectos = [
     subtitulo: "Sistema Full Stack de Inventario, Ventas y Stock",
     descripcion:
       "Plataforma full stack pensada para pequeños y medianos negocios. El backend (Node.js + Express + TypeScript + Prisma + PostgreSQL) administra productos, categorías, clientes, movimientos de stock (entradas, salidas, ajustes) y ventas, con autenticación JWT y refresh token, roles Admin/Vendedor, transacciones atómicas para evitar inconsistencias de stock, y cobros integrados con Mercado Pago (Checkout Pro) vía webhook. El frontend, en Next.js con React y TypeScript, ofrece un panel administrativo con dashboard de métricas, control de stock con alertas de bajo/crítico, ventas presenciales y a distancia con link de pago + código QR y polling de estado, y gestión de usuarios con rutas protegidas por rol.",
-    imagenes: ["/img/SinImagen.png"],
+    imagenes: ["/img/gestor01.png", "/img/gestor02.png", "/img/gestor03.png"],
     stack: {
       frontend: [
         "Next.js",

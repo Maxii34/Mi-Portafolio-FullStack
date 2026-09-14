@@ -33,9 +33,15 @@ export const estudios = [
       { label: "Módulo 1", items: "SQL & Prisma" },
       { label: "Módulo 2", items: "Git & GitHub" },
       { label: "Módulo 3", items: "Docker & Compose" },
-      { label: "Módulo 4", items: "Arquitectura RESTful, Middleware y NextAuth" },
+      {
+        label: "Módulo 4",
+        items: "Arquitectura RESTful, Middleware y NextAuth",
+      },
       { label: "Módulo 5", items: "Debugging" },
-      { label: "Módulo 6", items: "Lógica de programación para entrevistas técnicas" },
+      {
+        label: "Módulo 6",
+        items: "Lógica de programación para entrevistas técnicas",
+      },
       { label: "Módulo 7", items: "Arquitecturas para APIs" },
     ],
   },
@@ -47,12 +53,27 @@ export const estudios = [
     descripcion:
       "Curso flexible orientado a desarrolladores con experiencia, enfocado en dominar la automatización con IA mediante Claude Code. Instalación y configuración del entorno, creación de skills y comandos propios, conexión con servicios externos como GitHub vía MCPs, orquestación de subagentes para trabajo en paralelo y producción de un PR review profesional asistido por IA.",
     competencias: [
-      { label: "Clase 1", items: "Instalación y primer contacto con Claude Code" },
+      {
+        label: "Clase 1",
+        items: "Instalación y primer contacto con Claude Code",
+      },
       { label: "Clase 2", items: "CLAUDE.md y contexto inteligente" },
-      { label: "Clase 3", items: "Modos de autonomía y control de sesión (modo Plan)" },
-      { label: "Clase 4", items: "Bucle agéntico: implementación guiada de un endpoint con tests" },
-      { label: "Clase 5", items: "Skills: convenciones de equipo automatizadas" },
-      { label: "Clase 6", items: "Comandos personalizados (/new-endpoint, /commit)" },
+      {
+        label: "Clase 3",
+        items: "Modos de autonomía y control de sesión (modo Plan)",
+      },
+      {
+        label: "Clase 4",
+        items: "Bucle agéntico: implementación guiada de un endpoint con tests",
+      },
+      {
+        label: "Clase 5",
+        items: "Skills: convenciones de equipo automatizadas",
+      },
+      {
+        label: "Clase 6",
+        items: "Comandos personalizados (/new-endpoint, /commit)",
+      },
       { label: "Clase 7", items: "MCPs: integración con GitHub" },
       { label: "Clase 8", items: "Subagentes y trabajo en paralelo" },
       { label: "Clase 9", items: "Revisión de código asistida por IA y hooks" },

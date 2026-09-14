@@ -66,15 +66,15 @@ export const Introduccion = () => {
         </a>
       </motion.div>
 
-      <div className="mt-8 flex gap-8 border-t border-white/10 pt-6">
+      <div className="mt-8 grid grid-cols-3 gap-3 border-t border-white/10 pt-6 sm:gap-8">
         {[
           [`${proyectos.length}`, "Proyectos"],
           ["MERN", "Stack"],
           ["REST", "APIs"],
         ].map(([n, l]) => (
-          <div key={l}>
-            <div className="text-2xl font-extrabold text-white">{n}</div>
-            <div className="text-xs uppercase tracking-widest text-slate-500">{l}</div>
+          <div key={l} className="min-w-0">
+            <div className="truncate text-xl font-extrabold text-white sm:text-2xl">{n}</div>
+            <div className="truncate text-[10px] uppercase tracking-widest text-slate-500 sm:text-xs">{l}</div>
           </div>
         ))}
       </div>
